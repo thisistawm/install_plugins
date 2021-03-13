@@ -2,7 +2,7 @@
     <sys_hub_flow action="INSERT_OR_UPDATE">
         <access>public</access>
         <acls/>
-        <active>false</active>
+        <active>true</active>
         <annotation/>
         <callable_by_client_api>false</callable_by_client_api>
         <category/>
@@ -11,26 +11,26 @@
         <copied_from_name/>
         <description/>
         <internal_name>call_install_plugins</internal_name>
-        <label_cache>[{"name":"06cb651c-834d-432e-ba93-5854803d05a5.context","label":"3➛Context","reference":"sys_flow_context","reference_display":"Context","type":"reference","base_type":"reference","attributes":{}},{"name":"8fb08055-3082-4490-a75d-856fcfcb8ab0.context","label":"2➛Context","reference":"sys_flow_context","reference_display":"Context","type":"reference","base_type":"reference","attributes":{}},{"name":"886a6ab1-3b3f-495d-b353-97f810584540.context","label":"1➛Context","reference":"sys_flow_context","reference_display":"Context","type":"reference","base_type":"reference","attributes":{}}]</label_cache>
-        <latest_snapshot/>
-        <master_snapshot/>
+        <label_cache>[{"name":"886a6ab1-3b3f-495d-b353-97f810584540.context","label":"1➛Context","reference":"sys_flow_context","reference_display":"Flow engine context","type":"reference","base_type":"reference","attributes":{}},{"name":"8fb08055-3082-4490-a75d-856fcfcb8ab0.context","label":"2➛Context","reference":"sys_flow_context","reference_display":"Flow engine context","type":"reference","base_type":"reference","attributes":{}},{"name":"06cb651c-834d-432e-ba93-5854803d05a5.context","label":"2➛Context","reference":"sys_flow_context","reference_display":"Flow engine context","type":"reference","base_type":"reference","attributes":{}}]</label_cache>
+        <latest_snapshot>4ce4c4ba1b3ee41044a685d5604bcb68</latest_snapshot>
+        <master_snapshot>4ce4c4ba1b3ee41044a685d5604bcb68</master_snapshot>
         <name>Call install plugins</name>
         <natlang/>
         <outputs/>
-        <remote_trigger_id/>
+        <remote_trigger_id>68e408ba1b3ee41044a685d5604bcb3a</remote_trigger_id>
         <run_as>user</run_as>
         <run_with_roles/>
         <sc_callable>false</sc_callable>
         <show_draft_actions>false</show_draft_actions>
         <show_triggered_flows>false</show_triggered_flows>
-        <status>draft</status>
+        <status>published</status>
         <sys_class_name>sys_hub_flow</sys_class_name>
         <sys_created_by>lisa.holenstein</sys_created_by>
         <sys_created_on>2020-10-22 12:45:46</sys_created_on>
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>e51e91011b44a090d72d6284bb4bcb4c</sys_id>
-        <sys_mod_count>14</sys_mod_count>
+        <sys_mod_count>18</sys_mod_count>
         <sys_name>Call install plugins</sys_name>
         <sys_overrides/>
         <sys_package display_value="Install plugins" source="x_snc_lh_plugins">61a141ba1b7b9850d72d6284bb4bcb38</sys_package>
@@ -38,11 +38,67 @@
         <sys_scope display_value="Install plugins">61a141ba1b7b9850d72d6284bb4bcb38</sys_scope>
         <sys_update_name>sys_hub_flow_e51e91011b44a090d72d6284bb4bcb4c</sys_update_name>
         <sys_updated_by>lisa.holenstein</sys_updated_by>
-        <sys_updated_on>2021-03-05 08:59:11</sys_updated_on>
+        <sys_updated_on>2021-03-13 09:38:05</sys_updated_on>
         <type>flow</type>
     </sys_hub_flow>
     <sys_translated_text action="delete_multiple" query="documentkey=e51e91011b44a090d72d6284bb4bcb4c"/>
     <sys_variable_value action="delete_multiple" query="document_key=e51e91011b44a090d72d6284bb4bcb4c"/>
+    <sys_flow_timer_trigger action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <day_of_month>1</day_of_month>
+        <day_of_week/>
+        <name/>
+        <run_period/>
+        <run_start>2020-10-31 23:00:00</run_start>
+        <sys_class_name>sys_flow_timer_trigger</sys_class_name>
+        <sys_created_by>lisa.holenstein</sys_created_by>
+        <sys_created_on>2021-03-13 09:38:03</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>68e408ba1b3ee41044a685d5604bcb3a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_overrides/>
+        <sys_scope/>
+        <sys_updated_by>lisa.holenstein</sys_updated_by>
+        <sys_updated_on>2021-03-13 09:38:03</sys_updated_on>
+        <time/>
+        <timer_type>0</timer_type>
+    </sys_flow_timer_trigger>
+    <sys_flow_trigger_auto_script action="delete_multiple" query="name=Trigger:68e408ba1b3ee41044a685d5604bcb3a^sys_idNOT INece408ba1b3ee41044a685d5604bcb3a"/>
+    <sys_flow_trigger_auto_script action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <business_calendar/>
+        <condition/>
+        <conditional>false</conditional>
+        <entered_time/>
+        <name>Trigger:68e408ba1b3ee41044a685d5604bcb3a</name>
+        <offset/>
+        <offset_type>0</offset_type>
+        <run_as display_value="Lisa Holenstein">5235f418db031010dfc69d47f49619ff</run_as>
+        <run_as_tz/>
+        <run_dayofmonth>1</run_dayofmonth>
+        <run_dayofweek/>
+        <run_period/>
+        <run_start>2020-10-31 23:00:00</run_start>
+        <run_time/>
+        <run_type>once</run_type>
+        <script><![CDATA[sn_flow_trigger.FlowTriggerAPI.fireTimerTrigger('68e408ba1b3ee41044a685d5604bcb3a');]]></script>
+        <sys_class_name>sys_flow_trigger_auto_script</sys_class_name>
+        <sys_created_by>lisa.holenstein</sys_created_by>
+        <sys_created_on>2021-03-13 09:38:03</sys_created_on>
+        <sys_id>ece408ba1b3ee41044a685d5604bcb3a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Install plugins">61a141ba1b7b9850d72d6284bb4bcb38</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>lisa.holenstein</sys_updated_by>
+        <sys_updated_on>2021-03-13 09:38:03</sys_updated_on>
+        <time_zone/>
+        <trigger display_value="">68e408ba1b3ee41044a685d5604bcb3a</trigger>
+        <upgrade_safe>true</upgrade_safe>
+    </sys_flow_trigger_auto_script>
     <sys_hub_trigger_instance action="delete_multiple" query="flow=e51e91011b44a090d72d6284bb4bcb4c^sys_idNOT IN6071d5e91b54e010d72d6284bb4bcbd4"/>
     <sys_hub_trigger_instance action="INSERT_OR_UPDATE">
         <comment/>
@@ -53,10 +109,10 @@
         <sys_created_by>lisa.holenstein</sys_created_by>
         <sys_created_on>2020-11-05 11:23:11</sys_created_on>
         <sys_id>6071d5e91b54e010d72d6284bb4bcbd4</sys_id>
-        <sys_mod_count>14</sys_mod_count>
+        <sys_mod_count>18</sys_mod_count>
         <sys_scope/>
         <sys_updated_by>lisa.holenstein</sys_updated_by>
-        <sys_updated_on>2021-03-05 08:59:10</sys_updated_on>
+        <sys_updated_on>2021-03-13 09:38:05</sys_updated_on>
         <trigger_definition display_value="Run Once">0a76e504c32222002841b63b12d3aeac</trigger_definition>
         <trigger_inputs/>
         <trigger_outputs/>
@@ -89,13 +145,13 @@
         <sys_updated_by>lisa.holenstein</sys_updated_by>
         <sys_updated_on>2020-10-22 12:45:46</sys_updated_on>
     </sys_flow_cat_variable_model>
-    <sys_hub_sub_flow_instance action="delete_multiple" query="flow=e51e91011b44a090d72d6284bb4bcb4c^sys_idNOT INa54d214e1b756010d72d6284bb4bcb06,e871d5e91b54e010d72d6284bb4bcbd6,e9ac650e1b756010d72d6284bb4bcb07"/>
+    <sys_hub_sub_flow_instance action="delete_multiple" query="flow=e51e91011b44a090d72d6284bb4bcb4c^sys_idNOT INa54d214e1b756010d72d6284bb4bcb06,e871d5e91b54e010d72d6284bb4bcbd6"/>
     <sys_hub_sub_flow_instance action="INSERT_OR_UPDATE">
         <comment>IH</comment>
         <display_text/>
         <flow display_value="Call install plugins">e51e91011b44a090d72d6284bb4bcb4c</flow>
         <inputs/>
-        <order>3</order>
+        <order>2</order>
         <parent_ui_id/>
         <subflow display_value="Install plugins on remote instance">05be857a1bbb9850d72d6284bb4bcbdf</subflow>
         <subflow_instance_inputs/>
@@ -103,10 +159,10 @@
         <sys_created_by>lisa.holenstein</sys_created_by>
         <sys_created_on>2021-01-20 16:15:55</sys_created_on>
         <sys_id>a54d214e1b756010d72d6284bb4bcb06</sys_id>
-        <sys_mod_count>16</sys_mod_count>
+        <sys_mod_count>24</sys_mod_count>
         <sys_scope display_value="Install plugins">61a141ba1b7b9850d72d6284bb4bcb38</sys_scope>
         <sys_updated_by>lisa.holenstein</sys_updated_by>
-        <sys_updated_on>2021-03-05 08:59:11</sys_updated_on>
+        <sys_updated_on>2021-03-13 09:38:05</sys_updated_on>
         <ui_id>06cb651c-834d-432e-ba93-5854803d05a5</ui_id>
     </sys_hub_sub_flow_instance>
     <sys_variable_value action="delete_multiple" query="document_key=a54d214e1b756010d72d6284bb4bcb06"/>
@@ -118,10 +174,10 @@
         <sys_created_by>lisa.holenstein</sys_created_by>
         <sys_created_on>2021-01-20 16:15:55</sys_created_on>
         <sys_id>654d214e1b756010d72d6284bb4bcb08</sys_id>
-        <sys_mod_count>7</sys_mod_count>
+        <sys_mod_count>9</sys_mod_count>
         <sys_updated_by>lisa.holenstein</sys_updated_by>
-        <sys_updated_on>2021-03-05 08:59:11</sys_updated_on>
-        <value>https://aesshowcasemaster.service-now.com/</value>
+        <sys_updated_on>2021-03-13 09:37:49</sys_updated_on>
+        <value>https://YOURINSTANCE.service-now.com/</value>
         <variable display_value="Instance URL">8dbe857a1bbb9850d72d6284bb4bcbe1</variable>
     </sys_variable_value>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -130,13 +186,13 @@
         <order>3</order>
         <sys_class_name>sys_variable_value</sys_class_name>
         <sys_created_by>lisa.holenstein</sys_created_by>
-        <sys_created_on>2021-01-20 16:15:55</sys_created_on>
-        <sys_id>a14d214e1b756010d72d6284bb4bcb08</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_created_on>2021-03-13 09:18:42</sys_created_on>
+        <sys_id>857040f21b3ee41044a685d5604bcb75</sys_id>
+        <sys_mod_count>1</sys_mod_count>
         <sys_updated_by>lisa.holenstein</sys_updated_by>
-        <sys_updated_on>2021-01-20 16:15:55</sys_updated_on>
-        <value>IntegrationHub Enterprise</value>
-        <variable display_value="Package">c9bec57a1bbb9850d72d6284bb4bcb19</variable>
+        <sys_updated_on>2021-03-13 09:37:49</sys_updated_on>
+        <value>ih_enterprise</value>
+        <variable display_value="Package">722084b21b3ee41044a685d5604bcb85</variable>
     </sys_variable_value>
     <sys_variable_value action="INSERT_OR_UPDATE">
         <document>sys_hub_sub_flow_instance</document>
@@ -261,10 +317,10 @@
         <sys_created_by>lisa.holenstein</sys_created_by>
         <sys_created_on>2020-11-05 11:23:11</sys_created_on>
         <sys_id>e871d5e91b54e010d72d6284bb4bcbd6</sys_id>
-        <sys_mod_count>28</sys_mod_count>
+        <sys_mod_count>36</sys_mod_count>
         <sys_scope display_value="Install plugins">61a141ba1b7b9850d72d6284bb4bcb38</sys_scope>
         <sys_updated_by>lisa.holenstein</sys_updated_by>
-        <sys_updated_on>2021-03-05 08:59:11</sys_updated_on>
+        <sys_updated_on>2021-03-13 09:38:05</sys_updated_on>
         <ui_id>886a6ab1-3b3f-495d-b353-97f810584540</ui_id>
     </sys_hub_sub_flow_instance>
     <sys_variable_value action="delete_multiple" query="document_key=e871d5e91b54e010d72d6284bb4bcbd6"/>
@@ -274,13 +330,13 @@
         <order>3</order>
         <sys_class_name>sys_variable_value</sys_class_name>
         <sys_created_by>lisa.holenstein</sys_created_by>
-        <sys_created_on>2020-11-05 11:23:11</sys_created_on>
-        <sys_id>2071d5e91b54e010d72d6284bb4bcbda</sys_id>
-        <sys_mod_count>3</sys_mod_count>
+        <sys_created_on>2021-03-13 09:18:42</sys_created_on>
+        <sys_id>017040f21b3ee41044a685d5604bcb66</sys_id>
+        <sys_mod_count>1</sys_mod_count>
         <sys_updated_by>lisa.holenstein</sys_updated_by>
-        <sys_updated_on>2021-01-19 09:30:10</sys_updated_on>
-        <value>Virtual Agent</value>
-        <variable display_value="Package">c9bec57a1bbb9850d72d6284bb4bcb19</variable>
+        <sys_updated_on>2021-03-13 09:37:49</sys_updated_on>
+        <value>va</value>
+        <variable display_value="Package">722084b21b3ee41044a685d5604bcb85</variable>
     </sys_variable_value>
     <sys_variable_value action="INSERT_OR_UPDATE">
         <document>sys_hub_sub_flow_instance</document>
@@ -318,10 +374,10 @@
         <sys_created_by>lisa.holenstein</sys_created_by>
         <sys_created_on>2020-11-05 11:23:11</sys_created_on>
         <sys_id>e071d5e91b54e010d72d6284bb4bcbda</sys_id>
-        <sys_mod_count>11</sys_mod_count>
+        <sys_mod_count>13</sys_mod_count>
         <sys_updated_by>lisa.holenstein</sys_updated_by>
-        <sys_updated_on>2021-03-05 08:59:11</sys_updated_on>
-        <value>https://aesshowcasemaster.service-now.com/</value>
+        <sys_updated_on>2021-03-13 09:37:49</sys_updated_on>
+        <value>https://YOURINSTANCE.service-now.com/</value>
         <variable display_value="Instance URL">8dbe857a1bbb9850d72d6284bb4bcbe1</variable>
     </sys_variable_value>
     <sys_hub_sub_flow_instance_inputs action="delete_multiple" query="model=e871d5e91b54e010d72d6284bb4bcbd6^sys_idNOT INd2432a161b5ea0100c25777d8b4bcbac"/>
@@ -406,10 +462,116 @@
         <write_roles/>
         <xml_view>false</xml_view>
     </sys_hub_sub_flow_instance_inputs>
-    <sys_hub_sub_flow_instance action="INSERT_OR_UPDATE">
-        <comment>PAD</comment>
+    <sys_flow_trigger_plan action="delete_multiple" query="plan_id=e51e91011b44a090d72d6284bb4bcb4c^sys_idNOT IN28e408ba1b3ee41044a685d5604bcb3d"/>
+    <sys_flow_trigger_plan action="INSERT_OR_UPDATE">
+        <binding_strategy>com.snc.process_flow.engine.binding.RunAlways</binding_strategy>
+        <plan/>
+        <plan_id>e51e91011b44a090d72d6284bb4bcb4c</plan_id>
+        <snapshot>4ce4c4ba1b3ee41044a685d5604bcb68</snapshot>
+        <sys_created_by>lisa.holenstein</sys_created_by>
+        <sys_created_on>2021-03-13 09:38:03</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>28e408ba1b3ee41044a685d5604bcb3d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_overrides/>
+        <sys_scope/>
+        <sys_updated_by>lisa.holenstein</sys_updated_by>
+        <sys_updated_on>2021-03-13 09:38:03</sys_updated_on>
+        <trigger display_value="">68e408ba1b3ee41044a685d5604bcb3a</trigger>
+    </sys_flow_trigger_plan>
+    <sys_hub_flow_snapshot action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <acls/>
+        <active>true</active>
+        <annotation/>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <copied_from/>
+        <copied_from_name/>
+        <description/>
+        <internal_name>call_install_plugins</internal_name>
+        <label_cache>[{"name":"886a6ab1-3b3f-495d-b353-97f810584540.context","label":"1➛Context","reference":"sys_flow_context","reference_display":"Flow engine context","type":"reference","base_type":"reference","attributes":{}},{"name":"8fb08055-3082-4490-a75d-856fcfcb8ab0.context","label":"2➛Context","reference":"sys_flow_context","reference_display":"Flow engine context","type":"reference","base_type":"reference","attributes":{}},{"name":"06cb651c-834d-432e-ba93-5854803d05a5.context","label":"2➛Context","reference":"sys_flow_context","reference_display":"Flow engine context","type":"reference","base_type":"reference","attributes":{}}]</label_cache>
+        <master>true</master>
+        <name>Call install plugins</name>
+        <natlang/>
+        <outputs/>
+        <parent_flow display_value="Call install plugins">e51e91011b44a090d72d6284bb4bcb4c</parent_flow>
+        <remote_trigger_id/>
+        <run_as>user</run_as>
+        <run_with_roles/>
+        <sc_callable>false</sc_callable>
+        <status>published</status>
+        <sys_class_name>sys_hub_flow_snapshot</sys_class_name>
+        <sys_created_by>lisa.holenstein</sys_created_by>
+        <sys_created_on>2021-03-13 09:38:01</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>4ce4c4ba1b3ee41044a685d5604bcb68</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_overrides/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Install plugins">61a141ba1b7b9850d72d6284bb4bcb38</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>lisa.holenstein</sys_updated_by>
+        <sys_updated_on>2021-03-13 09:38:01</sys_updated_on>
+        <type>flow</type>
+    </sys_hub_flow_snapshot>
+    <sys_translated_text action="delete_multiple" query="documentkey=4ce4c4ba1b3ee41044a685d5604bcb68"/>
+    <sys_variable_value action="delete_multiple" query="document_key=4ce4c4ba1b3ee41044a685d5604bcb68"/>
+    <sys_hub_trigger_instance action="delete_multiple" query="flow=4ce4c4ba1b3ee41044a685d5604bcb68^sys_idNOT IN4ce4c4ba1b3ee41044a685d5604bcb6c"/>
+    <sys_hub_trigger_instance action="INSERT_OR_UPDATE">
+        <comment/>
         <display_text/>
-        <flow display_value="Call install plugins">e51e91011b44a090d72d6284bb4bcb4c</flow>
+        <flow display_value="Call install plugins">4ce4c4ba1b3ee41044a685d5604bcb68</flow>
+        <name>Run Once</name>
+        <remote_sys_id/>
+        <sys_created_by>lisa.holenstein</sys_created_by>
+        <sys_created_on>2021-03-13 09:38:01</sys_created_on>
+        <sys_id>4ce4c4ba1b3ee41044a685d5604bcb6c</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>lisa.holenstein</sys_updated_by>
+        <sys_updated_on>2021-03-13 09:38:03</sys_updated_on>
+        <trigger_definition display_value="Run Once">0a76e504c32222002841b63b12d3aeac</trigger_definition>
+        <trigger_inputs/>
+        <trigger_outputs/>
+        <trigger_type>run_once</trigger_type>
+    </sys_hub_trigger_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=4ce4c4ba1b3ee41044a685d5604bcb6c"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_trigger_instance</document>
+        <document_key>4ce4c4ba1b3ee41044a685d5604bcb6c</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>lisa.holenstein</sys_created_by>
+        <sys_created_on>2021-03-13 09:38:01</sys_created_on>
+        <sys_id>48e4c4ba1b3ee41044a685d5604bcb6d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>lisa.holenstein</sys_updated_by>
+        <sys_updated_on>2021-03-13 09:38:01</sys_updated_on>
+        <value>2020-11-01 00:00:00</value>
+        <variable display_value="Run in">92afcd94c32222002841b63b12d3aee8</variable>
+    </sys_variable_value>
+    <sys_flow_cat_variable_model action="delete_multiple" query="id=4ce4c4ba1b3ee41044a685d5604bcb68^sys_idNOT IN8ce4c4ba1b3ee41044a685d5604bcb69"/>
+    <sys_flow_cat_variable_model action="INSERT_OR_UPDATE">
+        <id>4ce4c4ba1b3ee41044a685d5604bcb68</id>
+        <name>Call install plugins</name>
+        <sys_created_by>lisa.holenstein</sys_created_by>
+        <sys_created_on>2021-03-13 09:38:01</sys_created_on>
+        <sys_id>8ce4c4ba1b3ee41044a685d5604bcb69</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>lisa.holenstein</sys_updated_by>
+        <sys_updated_on>2021-03-13 09:38:01</sys_updated_on>
+    </sys_flow_cat_variable_model>
+    <sys_hub_sub_flow_instance action="delete_multiple" query="flow=4ce4c4ba1b3ee41044a685d5604bcb68^sys_idNOT IN0ce4c4ba1b3ee41044a685d5604bcb8b,80e4c4ba1b3ee41044a685d5604bcb6e"/>
+    <sys_hub_sub_flow_instance action="INSERT_OR_UPDATE">
+        <comment>IH</comment>
+        <display_text/>
+        <flow display_value="Call install plugins">4ce4c4ba1b3ee41044a685d5604bcb68</flow>
         <inputs/>
         <order>2</order>
         <parent_ui_id/>
@@ -417,72 +579,72 @@
         <subflow_instance_inputs/>
         <sys_class_name>sys_hub_sub_flow_instance</sys_class_name>
         <sys_created_by>lisa.holenstein</sys_created_by>
-        <sys_created_on>2021-01-20 16:13:11</sys_created_on>
-        <sys_id>e9ac650e1b756010d72d6284bb4bcb07</sys_id>
-        <sys_mod_count>18</sys_mod_count>
+        <sys_created_on>2021-03-13 09:38:01</sys_created_on>
+        <sys_id>0ce4c4ba1b3ee41044a685d5604bcb8b</sys_id>
+        <sys_mod_count>2</sys_mod_count>
         <sys_scope display_value="Install plugins">61a141ba1b7b9850d72d6284bb4bcb38</sys_scope>
         <sys_updated_by>lisa.holenstein</sys_updated_by>
-        <sys_updated_on>2021-03-05 08:59:11</sys_updated_on>
-        <ui_id>8fb08055-3082-4490-a75d-856fcfcb8ab0</ui_id>
+        <sys_updated_on>2021-03-13 09:38:02</sys_updated_on>
+        <ui_id>06cb651c-834d-432e-ba93-5854803d05a5</ui_id>
     </sys_hub_sub_flow_instance>
-    <sys_variable_value action="delete_multiple" query="document_key=e9ac650e1b756010d72d6284bb4bcb07"/>
+    <sys_variable_value action="delete_multiple" query="document_key=0ce4c4ba1b3ee41044a685d5604bcb8b"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
         <document>sys_hub_sub_flow_instance</document>
-        <document_key>e9ac650e1b756010d72d6284bb4bcb07</document_key>
+        <document_key>0ce4c4ba1b3ee41044a685d5604bcb8b</document_key>
+        <order>3</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>lisa.holenstein</sys_created_by>
+        <sys_created_on>2021-03-13 09:38:02</sys_created_on>
+        <sys_id>0ce4c4ba1b3ee41044a685d5604bcb99</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>lisa.holenstein</sys_updated_by>
+        <sys_updated_on>2021-03-13 09:38:02</sys_updated_on>
+        <value>ih_enterprise</value>
+        <variable display_value="Package">722084b21b3ee41044a685d5604bcb85</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_sub_flow_instance</document>
+        <document_key>0ce4c4ba1b3ee41044a685d5604bcb8b</document_key>
         <order>2</order>
         <sys_class_name>sys_variable_value</sys_class_name>
         <sys_created_by>lisa.holenstein</sys_created_by>
-        <sys_created_on>2021-01-20 16:13:11</sys_created_on>
-        <sys_id>25ac650e1b756010d72d6284bb4bcb09</sys_id>
+        <sys_created_on>2021-03-13 09:38:02</sys_created_on>
+        <sys_id>48e4c4ba1b3ee41044a685d5604bcb99</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_updated_by>lisa.holenstein</sys_updated_by>
-        <sys_updated_on>2021-01-20 16:13:11</sys_updated_on>
+        <sys_updated_on>2021-03-13 09:38:02</sys_updated_on>
         <value>752a91887740001038e286a2681061fb</value>
         <variable display_value="Credential alias">8dbec57a1bbb9850d72d6284bb4bcb0f</variable>
     </sys_variable_value>
     <sys_variable_value action="INSERT_OR_UPDATE">
         <document>sys_hub_sub_flow_instance</document>
-        <document_key>e9ac650e1b756010d72d6284bb4bcb07</document_key>
+        <document_key>0ce4c4ba1b3ee41044a685d5604bcb8b</document_key>
         <order>0</order>
         <sys_class_name>sys_variable_value</sys_class_name>
         <sys_created_by>lisa.holenstein</sys_created_by>
-        <sys_created_on>2021-02-15 11:21:47</sys_created_on>
-        <sys_id>62432a161b5ea0100c25777d8b4bcbef</sys_id>
+        <sys_created_on>2021-03-13 09:38:02</sys_created_on>
+        <sys_id>c8e4c4ba1b3ee41044a685d5604bcb9a</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_updated_by>lisa.holenstein</sys_updated_by>
-        <sys_updated_on>2021-02-15 11:21:47</sys_updated_on>
+        <sys_updated_on>2021-03-13 09:38:02</sys_updated_on>
         <value>1</value>
-        <variable display_value="Wait For Completion">92432a161b5ea0100c25777d8b4bcbe3</variable>
+        <variable display_value="Wait For Completion">c4e4c4ba1b3ee41044a685d5604bcb8c</variable>
     </sys_variable_value>
     <sys_variable_value action="INSERT_OR_UPDATE">
         <document>sys_hub_sub_flow_instance</document>
-        <document_key>e9ac650e1b756010d72d6284bb4bcb07</document_key>
+        <document_key>0ce4c4ba1b3ee41044a685d5604bcb8b</document_key>
         <order>1</order>
         <sys_class_name>sys_variable_value</sys_class_name>
         <sys_created_by>lisa.holenstein</sys_created_by>
-        <sys_created_on>2021-01-20 16:13:11</sys_created_on>
-        <sys_id>a9ac650e1b756010d72d6284bb4bcb09</sys_id>
-        <sys_mod_count>7</sys_mod_count>
-        <sys_updated_by>lisa.holenstein</sys_updated_by>
-        <sys_updated_on>2021-03-05 08:59:11</sys_updated_on>
-        <value>https://aesshowcasemaster.service-now.com/</value>
-        <variable display_value="Instance URL">8dbe857a1bbb9850d72d6284bb4bcbe1</variable>
-    </sys_variable_value>
-    <sys_variable_value action="INSERT_OR_UPDATE">
-        <document>sys_hub_sub_flow_instance</document>
-        <document_key>e9ac650e1b756010d72d6284bb4bcb07</document_key>
-        <order>3</order>
-        <sys_class_name>sys_variable_value</sys_class_name>
-        <sys_created_by>lisa.holenstein</sys_created_by>
-        <sys_created_on>2021-01-20 16:13:11</sys_created_on>
-        <sys_id>e5ac650e1b756010d72d6284bb4bcb09</sys_id>
+        <sys_created_on>2021-03-13 09:38:02</sys_created_on>
+        <sys_id>cce4c4ba1b3ee41044a685d5604bcb99</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_updated_by>lisa.holenstein</sys_updated_by>
-        <sys_updated_on>2021-01-20 16:13:11</sys_updated_on>
-        <value>PAD</value>
-        <variable display_value="Package">c9bec57a1bbb9850d72d6284bb4bcb19</variable>
+        <sys_updated_on>2021-03-13 09:38:02</sys_updated_on>
+        <value>https://YOURINSTANCE.service-now.com/</value>
+        <variable display_value="Instance URL">8dbe857a1bbb9850d72d6284bb4bcbe1</variable>
     </sys_variable_value>
-    <sys_hub_sub_flow_instance_inputs action="delete_multiple" query="model=e9ac650e1b756010d72d6284bb4bcb07^sys_idNOT IN92432a161b5ea0100c25777d8b4bcbe3"/>
+    <sys_hub_sub_flow_instance_inputs action="delete_multiple" query="model=0ce4c4ba1b3ee41044a685d5604bcb8b^sys_idNOT INc4e4c4ba1b3ee41044a685d5604bcb8c"/>
     <sys_hub_sub_flow_instance_inputs action="INSERT_OR_UPDATE">
         <active>true</active>
         <array>false</array>
@@ -522,10 +684,10 @@
         <label>Wait For Completion</label>
         <mandatory>false</mandatory>
         <max_length>40</max_length>
-        <model display_value="">e9ac650e1b756010d72d6284bb4bcb07</model>
-        <model_id>e9ac650e1b756010d72d6284bb4bcb07</model_id>
+        <model display_value="">0ce4c4ba1b3ee41044a685d5604bcb8b</model>
+        <model_id>0ce4c4ba1b3ee41044a685d5604bcb8b</model_id>
         <model_table>sys_hub_flow_logic_ext_input</model_table>
-        <name>var__m_sys_hub_sub_flow_instance_inputs_e9ac650e1b756010d72d6284bb4bcb07</name>
+        <name>var__m_sys_hub_sub_flow_instance_inputs_0ce4c4ba1b3ee41044a685d5604bcb8b</name>
         <next_element/>
         <order>0</order>
         <primary>false</primary>
@@ -543,8 +705,8 @@
         <staged>false</staged>
         <sys_class_name>sys_hub_sub_flow_instance_inputs</sys_class_name>
         <sys_created_by>lisa.holenstein</sys_created_by>
-        <sys_created_on>2021-02-15 11:21:47</sys_created_on>
-        <sys_id>92432a161b5ea0100c25777d8b4bcbe3</sys_id>
+        <sys_created_on>2021-03-13 09:38:01</sys_created_on>
+        <sys_id>c4e4c4ba1b3ee41044a685d5604bcb8c</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_name/>
         <sys_package/>
@@ -552,7 +714,165 @@
         <sys_scope display_value="Install plugins">61a141ba1b7b9850d72d6284bb4bcb38</sys_scope>
         <sys_update_name/>
         <sys_updated_by>lisa.holenstein</sys_updated_by>
-        <sys_updated_on>2021-02-15 11:21:47</sys_updated_on>
+        <sys_updated_on>2021-03-13 09:38:01</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_sub_flow_instance_inputs>
+    <sys_hub_sub_flow_instance action="INSERT_OR_UPDATE">
+        <comment>VA</comment>
+        <display_text/>
+        <flow display_value="Call install plugins">4ce4c4ba1b3ee41044a685d5604bcb68</flow>
+        <inputs/>
+        <order>1</order>
+        <parent_ui_id/>
+        <subflow display_value="Install plugins on remote instance">05be857a1bbb9850d72d6284bb4bcbdf</subflow>
+        <subflow_instance_inputs/>
+        <sys_class_name>sys_hub_sub_flow_instance</sys_class_name>
+        <sys_created_by>lisa.holenstein</sys_created_by>
+        <sys_created_on>2021-03-13 09:38:01</sys_created_on>
+        <sys_id>80e4c4ba1b3ee41044a685d5604bcb6e</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_scope display_value="Install plugins">61a141ba1b7b9850d72d6284bb4bcb38</sys_scope>
+        <sys_updated_by>lisa.holenstein</sys_updated_by>
+        <sys_updated_on>2021-03-13 09:38:01</sys_updated_on>
+        <ui_id>886a6ab1-3b3f-495d-b353-97f810584540</ui_id>
+    </sys_hub_sub_flow_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=80e4c4ba1b3ee41044a685d5604bcb6e"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_sub_flow_instance</document>
+        <document_key>80e4c4ba1b3ee41044a685d5604bcb6e</document_key>
+        <order>3</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>lisa.holenstein</sys_created_by>
+        <sys_created_on>2021-03-13 09:38:01</sys_created_on>
+        <sys_id>08e4c4ba1b3ee41044a685d5604bcb8a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>lisa.holenstein</sys_updated_by>
+        <sys_updated_on>2021-03-13 09:38:01</sys_updated_on>
+        <value>va</value>
+        <variable display_value="Package">722084b21b3ee41044a685d5604bcb85</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_sub_flow_instance</document>
+        <document_key>80e4c4ba1b3ee41044a685d5604bcb6e</document_key>
+        <order>2</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>lisa.holenstein</sys_created_by>
+        <sys_created_on>2021-03-13 09:38:01</sys_created_on>
+        <sys_id>44e4c4ba1b3ee41044a685d5604bcb8a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>lisa.holenstein</sys_updated_by>
+        <sys_updated_on>2021-03-13 09:38:01</sys_updated_on>
+        <value>752a91887740001038e286a2681061fb</value>
+        <variable display_value="Credential alias">8dbec57a1bbb9850d72d6284bb4bcb0f</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_sub_flow_instance</document>
+        <document_key>80e4c4ba1b3ee41044a685d5604bcb6e</document_key>
+        <order>0</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>lisa.holenstein</sys_created_by>
+        <sys_created_on>2021-03-13 09:38:01</sys_created_on>
+        <sys_id>c4e4c4ba1b3ee41044a685d5604bcb8b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>lisa.holenstein</sys_updated_by>
+        <sys_updated_on>2021-03-13 09:38:01</sys_updated_on>
+        <value>1</value>
+        <variable display_value="Wait For Completion">40e4c4ba1b3ee41044a685d5604bcb6f</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_sub_flow_instance</document>
+        <document_key>80e4c4ba1b3ee41044a685d5604bcb6e</document_key>
+        <order>1</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>lisa.holenstein</sys_created_by>
+        <sys_created_on>2021-03-13 09:38:01</sys_created_on>
+        <sys_id>c8e4c4ba1b3ee41044a685d5604bcb8a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>lisa.holenstein</sys_updated_by>
+        <sys_updated_on>2021-03-13 09:38:01</sys_updated_on>
+        <value>https://YOURINSTANCE.service-now.com/</value>
+        <variable display_value="Instance URL">8dbe857a1bbb9850d72d6284bb4bcbe1</variable>
+    </sys_variable_value>
+    <sys_hub_sub_flow_instance_inputs action="delete_multiple" query="model=80e4c4ba1b3ee41044a685d5604bcb6e^sys_idNOT IN40e4c4ba1b3ee41044a685d5604bcb6f"/>
+    <sys_hub_sub_flow_instance_inputs action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,fd_hide_inline_script_widget=true,uiType=boolean,uiTypeLabel=True/False</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>wait_for_completion</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">boolean</internal_type>
+        <label>Wait For Completion</label>
+        <mandatory>false</mandatory>
+        <max_length>40</max_length>
+        <model display_value="">80e4c4ba1b3ee41044a685d5604bcb6e</model>
+        <model_id>80e4c4ba1b3ee41044a685d5604bcb6e</model_id>
+        <model_table>sys_hub_flow_logic_ext_input</model_table>
+        <name>var__m_sys_hub_sub_flow_instance_inputs_80e4c4ba1b3ee41044a685d5604bcb6e</name>
+        <next_element/>
+        <order>0</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_sub_flow_instance_inputs</sys_class_name>
+        <sys_created_by>lisa.holenstein</sys_created_by>
+        <sys_created_on>2021-03-13 09:38:01</sys_created_on>
+        <sys_id>40e4c4ba1b3ee41044a685d5604bcb6f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Install plugins">61a141ba1b7b9850d72d6284bb4bcb38</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>lisa.holenstein</sys_updated_by>
+        <sys_updated_on>2021-03-13 09:38:01</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
