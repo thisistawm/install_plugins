@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_choice action="INSERT_OR_UPDATE" field="u_package" table="x_snc_lh_plugins_lookup" version="3">
+        <sys_choice_set action="INSERT_OR_UPDATE">
+            <element>u_package</element>
+            <name>x_snc_lh_plugins_lookup</name>
+            <sys_class_name>sys_choice_set</sys_class_name>
+            <sys_created_by>lisa.holenstein</sys_created_by>
+            <sys_created_on>2021-01-20 13:17:15</sys_created_on>
+            <sys_id>ac6445421bf16010d72d6284bb4bcbaa</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>u_package</sys_name>
+            <sys_package display_value="Install plugins" source="x_snc_lh_plugins">61a141ba1b7b9850d72d6284bb4bcb38</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Install plugins">61a141ba1b7b9850d72d6284bb4bcb38</sys_scope>
+            <sys_update_name>sys_choice_x_snc_lh_plugins_lookup_u_package</sys_update_name>
+            <sys_updated_by>lisa.holenstein</sys_updated_by>
+            <sys_updated_on>2021-01-20 13:17:15</sys_updated_on>
+        </sys_choice_set>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>u_package</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>IntegrationHub Enterprise</label>
+            <language>en</language>
+            <name>x_snc_lh_plugins_lookup</name>
+            <sequence>10</sequence>
+            <synonyms/>
+            <sys_created_by>lisa.holenstein</sys_created_by>
+            <sys_created_on>2021-01-20 13:17:15</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>246445421bf16010d72d6284bb4bcbaa</sys_id>
+            <sys_mod_count>3</sys_mod_count>
+            <sys_updated_by>lisa.holenstein</sys_updated_by>
+            <sys_updated_on>2021-03-05 09:11:31</sys_updated_on>
+            <value>ih_enterprise</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>u_package</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>PAD</label>
+            <language>en</language>
+            <name>x_snc_lh_plugins_lookup</name>
+            <sequence>20</sequence>
+            <synonyms/>
+            <sys_created_by>lisa.holenstein</sys_created_by>
+            <sys_created_on>2021-01-20 13:17:15</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>e86445421bf16010d72d6284bb4bcbac</sys_id>
+            <sys_mod_count>2</sys_mod_count>
+            <sys_updated_by>lisa.holenstein</sys_updated_by>
+            <sys_updated_on>2021-03-05 09:11:32</sys_updated_on>
+            <value>pad</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>u_package</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Performance Analytics</label>
+            <language>en</language>
+            <name>x_snc_lh_plugins_lookup</name>
+            <sequence>30</sequence>
+            <synonyms/>
+            <sys_created_by>lisa.holenstein</sys_created_by>
+            <sys_created_on>2021-01-20 13:17:15</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>ac6445421bf16010d72d6284bb4bcbad</sys_id>
+            <sys_mod_count>2</sys_mod_count>
+            <sys_updated_by>lisa.holenstein</sys_updated_by>
+            <sys_updated_on>2021-03-05 09:11:35</sys_updated_on>
+            <value>pa</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>u_package</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Virtual Agent</label>
+            <language>en</language>
+            <name>x_snc_lh_plugins_lookup</name>
+            <sequence>40</sequence>
+            <synonyms/>
+            <sys_created_by>lisa.holenstein</sys_created_by>
+            <sys_created_on>2021-01-20 13:17:16</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>606445421bf16010d72d6284bb4bcbaf</sys_id>
+            <sys_mod_count>2</sys_mod_count>
+            <sys_updated_by>lisa.holenstein</sys_updated_by>
+            <sys_updated_on>2021-03-05 09:11:37</sys_updated_on>
+            <value>va</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>u_package</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Agile Devlopment</label>
+            <language>en</language>
+            <name>x_snc_lh_plugins_lookup</name>
+            <sequence>50</sequence>
+            <synonyms/>
+            <sys_created_by>lisa.holenstein</sys_created_by>
+            <sys_created_on>2021-03-05 09:11:26</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>68123e481b7624100c25777d8b4bcbc9</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>lisa.holenstein</sys_updated_by>
+            <sys_updated_on>2021-03-05 09:11:26</sys_updated_on>
+            <value>agile</value>
+        </sys_choice>
+    </sys_choice>
+</record_update>

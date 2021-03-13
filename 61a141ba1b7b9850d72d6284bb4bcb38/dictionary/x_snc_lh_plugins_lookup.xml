@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element label="Install plugin lookup" max_length="40" name="x_snc_lh_plugins_lookup" sizeclass="18" type="collection">
+        <element label="Order" max_length="40" name="order" type="integer"/>
+        <element attributes="edge_encryption_enabled=true" choice="1" label="Package" mandatory="true" max_length="100" name="u_package" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="IntegrationHub Enterprise" sequence="10" value="ih_enterprise"/>
+                <element inactive_on_update="false" label="PAD" sequence="20" value="pad"/>
+                <element inactive_on_update="false" label="Performance Analytics" sequence="30" value="pa"/>
+                <element inactive_on_update="false" label="Virtual Agent" sequence="40" value="va"/>
+                <element inactive_on_update="false" label="Agile Devlopment" sequence="50" value="agile"/>
+            </choice>
+        </element>
+        <element attributes="edge_encryption_enabled=true" label="Plugin ID" mandatory="true" max_length="200" name="u_plugin_id" type="string"/>
+        <element attributes="edge_encryption_enabled=true" display="true" label="Plugin name" max_length="200" name="u_plugin_name" type="string"/>
+    </element>
+</database>

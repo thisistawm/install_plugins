@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl_role">
+    <sys_security_acl_role action="INSERT_OR_UPDATE">
+        <sys_class_name>sys_security_acl_role</sys_class_name>
+        <sys_created_by>lisa.holenstein</sys_created_by>
+        <sys_created_on>2020-10-15 11:32:33</sys_created_on>
+        <sys_id>b43a85361bbb9850d72d6284bb4bcb63</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_snc_lh_plugins_lookup.x_snc_lh_plugins.install_plugin_lookup_user</sys_name>
+        <sys_package display_value="Install plugins" source="x_snc_lh_plugins">61a141ba1b7b9850d72d6284bb4bcb38</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Install plugins">61a141ba1b7b9850d72d6284bb4bcb38</sys_scope>
+        <sys_security_acl display_value="x_snc_lh_plugins_lookup">383a85361bbb9850d72d6284bb4bcb60</sys_security_acl>
+        <sys_update_name>sys_security_acl_role_b43a85361bbb9850d72d6284bb4bcb63</sys_update_name>
+        <sys_updated_by>lisa.holenstein</sys_updated_by>
+        <sys_updated_on>2020-10-15 11:32:33</sys_updated_on>
+        <sys_user_role display_value="x_snc_lh_plugins.install_plugin_lookup_user" name="x_snc_lh_plugins.install_plugin_lookup_user">a03a05361bbb9850d72d6284bb4bcb06</sys_user_role>
+        <transaction_id/>
+    </sys_security_acl_role>
+</record_update>

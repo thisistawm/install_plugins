@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_metadata_link">
+    <sys_metadata_link action="INSERT_OR_UPDATE">
+        <directory>unload.demo</directory>
+        <documentkey>2bebc0231badec500c25777d8b4bcbc9</documentkey>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="x_snc_lh_plugins_lookup">
+    <x_snc_lh_plugins_lookup action="INSERT_OR_UPDATE">
+        <order>20</order>
+        <sys_created_by>lisa.holenstein</sys_created_by>
+        <sys_created_on>2021-01-12 14:45:48</sys_created_on>
+        <sys_id>2bebc0231badec500c25777d8b4bcbc9</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>lisa.holenstein</sys_updated_by>
+        <sys_updated_on>2021-01-12 14:45:48</sys_updated_on>
+        <u_package>Performance Analytics</u_package>
+        <u_plugin_id>com.snc.pa.configurationgenerator</u_plugin_id>
+        <u_plugin_name>Performance Analytics – Configuration Generator</u_plugin_name>
+    </x_snc_lh_plugins_lookup>
+</record_update>
+]]></payload>
+        <sys_class_name>sys_metadata_link</sys_class_name>
+        <sys_created_by>lisa.holenstein</sys_created_by>
+        <sys_created_on>2021-03-13 08:50:29</sys_created_on>
+        <sys_id>abf97faa1bfae41044a685d5604bcbeb</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Performance Analytics – Configuration Generator</sys_name>
+        <sys_package display_value="Install plugins" source="x_snc_lh_plugins">61a141ba1b7b9850d72d6284bb4bcb38</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Install plugins">61a141ba1b7b9850d72d6284bb4bcb38</sys_scope>
+        <sys_update_name>sys_metadata_link_abf97faa1bfae41044a685d5604bcbeb</sys_update_name>
+        <sys_updated_by>lisa.holenstein</sys_updated_by>
+        <sys_updated_on>2021-03-13 08:50:29</sys_updated_on>
+        <tablename>x_snc_lh_plugins_lookup</tablename>
+    </sys_metadata_link>
+</record_update>

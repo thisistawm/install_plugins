@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_scope_privilege">
+    <sys_scope_privilege action="INSERT_OR_UPDATE">
+        <operation>execute</operation>
+        <source_scope display_value="Install plugins">61a141ba1b7b9850d72d6284bb4bcb38</source_scope>
+        <status>allowed</status>
+        <sys_class_name>sys_scope_privilege</sys_class_name>
+        <sys_created_by>lisa.holenstein</sys_created_by>
+        <sys_created_on>2021-03-05 09:24:20</sys_created_on>
+        <sys_id>35057e401bb624100c25777d8b4bcbdb</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>ManyToManyChecker</sys_name>
+        <sys_package display_value="Install plugins" source="x_snc_lh_plugins">61a141ba1b7b9850d72d6284bb4bcb38</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Install plugins">61a141ba1b7b9850d72d6284bb4bcb38</sys_scope>
+        <sys_update_name>sys_scope_privilege_35057e401bb624100c25777d8b4bcbdb</sys_update_name>
+        <sys_updated_by>lisa.holenstein</sys_updated_by>
+        <sys_updated_on>2021-03-05 09:24:20</sys_updated_on>
+        <target_name>ManyToManyChecker</target_name>
+        <target_scope display_value="Global">global</target_scope>
+        <target_type>sys_script_include</target_type>
+    </sys_scope_privilege>
+</record_update>

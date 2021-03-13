@@ -1,0 +1,1155 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_hub_flow">
+    <sys_hub_flow action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <acls/>
+        <active>true</active>
+        <annotation/>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <compiler_build>glide-quebec-12-09-2020__patch1-02-18-2021</compiler_build>
+        <copied_from>8ca3f630dbc39010dfc69d47f4961931</copied_from>
+        <copied_from_name>Install Plugins on remote instan</copied_from_name>
+        <description/>
+        <internal_name>install_plugins_on_remote_instance</internal_name>
+        <label_cache>[{"name":"e459699e-3509-4dff-be5d-2d17f13f0b71.Count","label":"1➛Count","reference_display":"Count","type":"integer","base_type":"integer","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"e459699e-3509-4dff-be5d-2d17f13f0b71.Table","label":"1➛Install plugin lookup Table","reference":"x_snc_lh_plugins_lookup","reference_display":"Install plugin lookup Table","type":"table_name","base_type":"table_name","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"e459699e-3509-4dff-be5d-2d17f13f0b71.Records","label":"1➛Install plugin lookup Records","reference":"x_snc_lh_plugins_lookup","reference_display":"Install plugin lookup Records","type":"records","base_type":"records","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"ce9f7a14-49a8-4110-a22f-864bad37fcc0.item.u_plugin_id","label":"2➛Install plugin lookup Record➛Plugin ID","reference":"","reference_display":"Plugin ID","type":"string","base_type":"string","parent_table_name":"x_snc_lh_plugins_lookup","column_name":"u_plugin_id"},{"name":"6d3f7dfc-f6b2-48d1-a428-902068431644.Count","label":"1➛Count","reference_display":"Count","type":"integer","base_type":"integer","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"6d3f7dfc-f6b2-48d1-a428-902068431644.Table","label":"1➛Install plugin lookup Table","reference":"x_snc_lh_plugins_lookup","reference_display":"Install plugin lookup","type":"table_name","base_type":"table_name","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"6d3f7dfc-f6b2-48d1-a428-902068431644.Records","label":"1➛Install plugin lookup Records","reference":"x_snc_lh_plugins_lookup","reference_display":"Install plugin lookup","type":"records","base_type":"records","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"subflow.credential_alias","label":"Input➛Credential alias","reference":"sys_alias","reference_display":"Connection \u0026 Credential Aliases","type":"reference","base_type":"reference","column_name":"","attributes":{"uiType":"reference","uiTypeLabel":"Reference","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"e52eba43-69a1-4c7f-b29b-552a9a22b6d7","sourceUiUniqueId":"","sourceType":"","sourceId":""}},{"name":"d9ca7c14-dc81-40d9-a891-a1d3a6f1f8ec.http_status","label":"8➛HTTP Status","reference_display":"HTTP Status","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"d9ca7c14-dc81-40d9-a891-a1d3a6f1f8ec.progress_id","label":"8➛Progress Id","reference_display":"Progress Id","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"d9ca7c14-dc81-40d9-a891-a1d3a6f1f8ec.progress_url","label":"8➛Progress URL","reference_display":"Progress URL","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"d9ca7c14-dc81-40d9-a891-a1d3a6f1f8ec.error","label":"8➛Error","reference_display":"Error","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"d9ca7c14-dc81-40d9-a891-a1d3a6f1f8ec.status_detail","label":"8➛Status Detail","reference_display":"Status Detail","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"d9ca7c14-dc81-40d9-a891-a1d3a6f1f8ec.status_message","label":"8➛Status Message","reference_display":"Status Message","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"d9ca7c14-dc81-40d9-a891-a1d3a6f1f8ec.status_label","label":"8➛Status Label","reference_display":"Status Label","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"d9ca7c14-dc81-40d9-a891-a1d3a6f1f8ec.status","label":"8➛Status","reference_display":"Status","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"6721c9f2-fda4-4b5e-b45e-7c9b300bbfa0.http_status","label":"7➛HTTP Status","reference_display":"HTTP Status","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"6721c9f2-fda4-4b5e-b45e-7c9b300bbfa0.progress_id","label":"7➛Progress Id","reference_display":"Progress Id","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"6721c9f2-fda4-4b5e-b45e-7c9b300bbfa0.progress_url","label":"7➛Progress URL","reference_display":"Progress URL","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"6721c9f2-fda4-4b5e-b45e-7c9b300bbfa0.error","label":"7➛Error","reference_display":"Error","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"6721c9f2-fda4-4b5e-b45e-7c9b300bbfa0.status_detail","label":"7➛Status Detail","reference_display":"Status Detail","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"6721c9f2-fda4-4b5e-b45e-7c9b300bbfa0.status_message","label":"7➛Status Message","reference_display":"Status Message","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"6721c9f2-fda4-4b5e-b45e-7c9b300bbfa0.status_label","label":"7➛Status Label","reference_display":"Status Label","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"6721c9f2-fda4-4b5e-b45e-7c9b300bbfa0.status","label":"7➛Status","reference_display":"Status","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"adbd27d0-17d8-449e-8d56-e14ac17c1f33.http_status","label":"6➛HTTP Status","reference_display":"HTTP Status","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"adbd27d0-17d8-449e-8d56-e14ac17c1f33.progress_id","label":"6➛Progress Id","reference_display":"Progress Id","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"adbd27d0-17d8-449e-8d56-e14ac17c1f33.progress_url","label":"6➛Progress URL","reference_display":"Progress URL","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"adbd27d0-17d8-449e-8d56-e14ac17c1f33.error","label":"6➛Error","reference_display":"Error","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"adbd27d0-17d8-449e-8d56-e14ac17c1f33.status_detail","label":"6➛Status Detail","reference_display":"Status Detail","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"adbd27d0-17d8-449e-8d56-e14ac17c1f33.status_message","label":"6➛Status Message","reference_display":"Status Message","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"adbd27d0-17d8-449e-8d56-e14ac17c1f33.status_label","label":"6➛Status Label","reference_display":"Status Label","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"adbd27d0-17d8-449e-8d56-e14ac17c1f33.status","label":"6➛Status","reference_display":"Status","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"90e6161f-84f7-4ad0-abcf-3198004015e1.http_status","label":"5➛HTTP Status","reference_display":"HTTP Status","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"90e6161f-84f7-4ad0-abcf-3198004015e1.progress_id","label":"5➛Progress Id","reference_display":"Progress Id","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"90e6161f-84f7-4ad0-abcf-3198004015e1.progress_url","label":"5➛Progress URL","reference_display":"Progress URL","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"90e6161f-84f7-4ad0-abcf-3198004015e1.error","label":"5➛Error","reference_display":"Error","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"90e6161f-84f7-4ad0-abcf-3198004015e1.status_detail","label":"5➛Status Detail","reference_display":"Status Detail","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"90e6161f-84f7-4ad0-abcf-3198004015e1.status_message","label":"5➛Status Message","reference_display":"Status Message","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"90e6161f-84f7-4ad0-abcf-3198004015e1.status_label","label":"5➛Status Label","reference_display":"Status Label","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"90e6161f-84f7-4ad0-abcf-3198004015e1.status","label":"5➛Status","reference_display":"Status","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"43cfa86c-3f0f-44ab-a0b9-4f2734ceb77d.http_status","label":"4➛HTTP Status","reference_display":"HTTP Status","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"43cfa86c-3f0f-44ab-a0b9-4f2734ceb77d.progress_id","label":"4➛Progress Id","reference_display":"Progress Id","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"43cfa86c-3f0f-44ab-a0b9-4f2734ceb77d.progress_url","label":"4➛Progress URL","reference_display":"Progress URL","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"43cfa86c-3f0f-44ab-a0b9-4f2734ceb77d.error","label":"4➛Error","reference_display":"Error","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"43cfa86c-3f0f-44ab-a0b9-4f2734ceb77d.status_detail","label":"4➛Status Detail","reference_display":"Status Detail","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"43cfa86c-3f0f-44ab-a0b9-4f2734ceb77d.status_message","label":"4➛Status Message","reference_display":"Status Message","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"43cfa86c-3f0f-44ab-a0b9-4f2734ceb77d.status_label","label":"4➛Status Label","reference_display":"Status Label","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"43cfa86c-3f0f-44ab-a0b9-4f2734ceb77d.status","label":"4➛Status","reference_display":"Status","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"6d50d2ab-f94f-4d24-82cd-daab3b1d3147.http_status","label":"2➛HTTP Status","reference_display":"HTTP Status","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"6d50d2ab-f94f-4d24-82cd-daab3b1d3147.progress_id","label":"2➛Progress Id","reference_display":"Progress Id","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"6d50d2ab-f94f-4d24-82cd-daab3b1d3147.progress_url","label":"2➛Progress URL","reference_display":"Progress URL","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"6d50d2ab-f94f-4d24-82cd-daab3b1d3147.error","label":"2➛Error","reference_display":"Error","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"6d50d2ab-f94f-4d24-82cd-daab3b1d3147.status_detail","label":"2➛Status Detail","reference_display":"Status Detail","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"6d50d2ab-f94f-4d24-82cd-daab3b1d3147.status_message","label":"2➛Status Message","reference_display":"Status Message","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"6d50d2ab-f94f-4d24-82cd-daab3b1d3147.status_label","label":"2➛Status Label","reference_display":"Status Label","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"6d50d2ab-f94f-4d24-82cd-daab3b1d3147.status","label":"2➛Status","reference_display":"Status","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"subflow.instance_url","label":"Input➛Instance URL","reference":"","reference_display":"","type":"url","base_type":"url","column_name":"","attributes":{"uiType":"url","uiTypeLabel":"URL","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"cafbfecb-301e-4f7f-aaf5-5e3d9db5717e","sourceUiUniqueId":"","sourceType":"","sourceId":""}},{"name":"56556742-d9d8-4330-9329-445a983b22f2.status","label":"3➛Status","reference_display":"Status","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"56556742-d9d8-4330-9329-445a983b22f2.status_label","label":"3➛Status Label","reference_display":"Status Label","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"56556742-d9d8-4330-9329-445a983b22f2.status_message","label":"3➛Status Message","reference_display":"Status Message","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"56556742-d9d8-4330-9329-445a983b22f2.status_detail","label":"3➛Status Detail","reference_display":"Status Detail","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"56556742-d9d8-4330-9329-445a983b22f2.error","label":"3➛Error","reference_display":"Error","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"56556742-d9d8-4330-9329-445a983b22f2.progress_url","label":"3➛Progress URL","reference_display":"Progress URL","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"56556742-d9d8-4330-9329-445a983b22f2.progress_id","label":"3➛Progress Id","reference_display":"Progress Id","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"56556742-d9d8-4330-9329-445a983b22f2.http_status","label":"3➛HTTP Status","reference_display":"HTTP Status","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"325419b5-6857-4111-af6a-8ed5e163e31a.status","label":"3➛Status","reference_display":"Status","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"325419b5-6857-4111-af6a-8ed5e163e31a.status_label","label":"3➛Status Label","reference_display":"Status Label","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"325419b5-6857-4111-af6a-8ed5e163e31a.status_message","label":"3➛Status Message","reference_display":"Status Message","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"325419b5-6857-4111-af6a-8ed5e163e31a.status_detail","label":"3➛Status Detail","reference_display":"Status Detail","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"325419b5-6857-4111-af6a-8ed5e163e31a.error","label":"3➛Error","reference_display":"Error","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"325419b5-6857-4111-af6a-8ed5e163e31a.progress_url","label":"3➛Progress URL","reference_display":"Progress URL","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"325419b5-6857-4111-af6a-8ed5e163e31a.progress_id","label":"3➛Progress Id","reference_display":"Progress Id","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"325419b5-6857-4111-af6a-8ed5e163e31a.http_status","label":"3➛HTTP Status","reference_display":"HTTP Status","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"84a34e5a-e92f-4f13-b7d4-1cec65e94560.Records","label":"1➛Records","reference_display":"Records","type":"records","base_type":"records","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"84a34e5a-e92f-4f13-b7d4-1cec65e94560.Table","label":"1➛Table","reference_display":"Table","type":"table_name","base_type":"table_name","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"84a34e5a-e92f-4f13-b7d4-1cec65e94560.Count","label":"1➛Count","reference_display":"Count","type":"integer","base_type":"integer","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"ce9f7a14-49a8-4110-a22f-864bad37fcc0.item","label":"2➛Install plugin lookup Record","reference":"x_snc_lh_plugins_lookup","reference_display":"Install plugin lookup Record","type":"reference","base_type":"reference","attributes":{"pills_draggable_inside_block":"true","pills_draggable_outside_block":"false"}},{"name":"subflow.package","label":"Input➛Package","reference":"","reference_display":"","type":"string","base_type":"string","attributes":{"uiType":"choice","uiTypeLabel":"Choice","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"38f4e171-17c6-4a49-980d-d617e28ac11b","sourceUiUniqueId":"","sourceType":"","sourceId":""}}]</label_cache>
+        <latest_snapshot>446fae041b7624100c25777d8b4bcb6a</latest_snapshot>
+        <master_snapshot>05be857a1bbb9850d72d6284bb4bcbdf</master_snapshot>
+        <name>Install plugins on remote instance</name>
+        <natlang/>
+        <outputs/>
+        <remote_trigger_id/>
+        <run_as>system</run_as>
+        <run_with_roles/>
+        <sc_callable>false</sc_callable>
+        <show_draft_actions>false</show_draft_actions>
+        <show_triggered_flows>false</show_triggered_flows>
+        <status>draft</status>
+        <sys_class_name>sys_hub_flow</sys_class_name>
+        <sys_created_by>lisa.holenstein</sys_created_by>
+        <sys_created_on>2020-10-15 10:57:16</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>c82245fa1b7b9850d72d6284bb4bcb53</sys_id>
+        <sys_mod_count>16</sys_mod_count>
+        <sys_name>Install plugins on remote instance</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Install plugins" source="x_snc_lh_plugins">61a141ba1b7b9850d72d6284bb4bcb38</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Install plugins">61a141ba1b7b9850d72d6284bb4bcb38</sys_scope>
+        <sys_update_name>sys_hub_flow_c82245fa1b7b9850d72d6284bb4bcb53</sys_update_name>
+        <sys_updated_by>lisa.holenstein</sys_updated_by>
+        <sys_updated_on>2021-01-20 13:55:35</sys_updated_on>
+        <type>subflow</type>
+    </sys_hub_flow>
+    <sys_translated_text action="delete_multiple" query="documentkey=c82245fa1b7b9850d72d6284bb4bcb53"/>
+    <sys_variable_value action="delete_multiple" query="document_key=c82245fa1b7b9850d72d6284bb4bcb53"/>
+    <sys_flow_cat_variable_model action="delete_multiple" query="id=c82245fa1b7b9850d72d6284bb4bcb53^sys_idNOT IN4c2245fa1b7b9850d72d6284bb4bcb55"/>
+    <sys_flow_cat_variable_model action="INSERT_OR_UPDATE">
+        <id>c82245fa1b7b9850d72d6284bb4bcb53</id>
+        <name>Install Plugins on remote instance</name>
+        <sys_created_by>lisa.holenstein</sys_created_by>
+        <sys_created_on>2020-10-15 10:57:16</sys_created_on>
+        <sys_id>4c2245fa1b7b9850d72d6284bb4bcb55</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>lisa.holenstein</sys_updated_by>
+        <sys_updated_on>2020-10-15 10:57:16</sys_updated_on>
+    </sys_flow_cat_variable_model>
+    <sys_hub_flow_input action="delete_multiple" query="model=c82245fa1b7b9850d72d6284bb4bcb53^sys_idNOT IN402245fa1b7b9850d72d6284bb4bcb5c,7da2053e1b7b9850d72d6284bb4bcbc9,a52d498a1bf16010d72d6284bb4bcbb7"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=url,uiTypeLabel=URL,uiUniqueId=cafbfecb-301e-4f7f-aaf5-5e3d9db5717e</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value>https://appenginewf.service-now.com/</default_value>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>instance_url</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="URL">url</internal_type>
+        <label>Instance URL</label>
+        <mandatory>true</mandatory>
+        <max_length>1024</max_length>
+        <model display_value="Install plugins on remote instance">c82245fa1b7b9850d72d6284bb4bcb53</model>
+        <model_id>c82245fa1b7b9850d72d6284bb4bcb53</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_c82245fa1b7b9850d72d6284bb4bcb53</name>
+        <next_element/>
+        <order>1</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>lisa.holenstein</sys_created_by>
+        <sys_created_on>2020-10-15 10:57:16</sys_created_on>
+        <sys_id>402245fa1b7b9850d72d6284bb4bcb5c</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Install plugins">61a141ba1b7b9850d72d6284bb4bcb38</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>lisa.holenstein</sys_updated_by>
+        <sys_updated_on>2020-10-15 10:57:17</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=reference,uiTypeLabel=Reference,uiUniqueId=e52eba43-69a1-4c7f-b29b-552a9a22b6d7</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>credential_alias</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="Reference">reference</internal_type>
+        <label>Credential alias</label>
+        <mandatory>true</mandatory>
+        <max_length>32</max_length>
+        <model display_value="Install plugins on remote instance">c82245fa1b7b9850d72d6284bb4bcb53</model>
+        <model_id>c82245fa1b7b9850d72d6284bb4bcb53</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_c82245fa1b7b9850d72d6284bb4bcb53</name>
+        <next_element/>
+        <order>2</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference display_value="" name="sys_alias">sys_alias</reference>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>lisa.holenstein</sys_created_by>
+        <sys_created_on>2020-10-15 10:59:34</sys_created_on>
+        <sys_id>7da2053e1b7b9850d72d6284bb4bcbc9</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Install plugins">61a141ba1b7b9850d72d6284bb4bcb38</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>lisa.holenstein</sys_updated_by>
+        <sys_updated_on>2020-10-15 10:59:34</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String,uiUniqueId=38f4e171-17c6-4a49-980d-d617e28ac11b</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field>u_package</choice_field>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>package</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>Package</label>
+        <mandatory>false</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="Install plugins on remote instance">c82245fa1b7b9850d72d6284bb4bcb53</model>
+        <model_id>c82245fa1b7b9850d72d6284bb4bcb53</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_c82245fa1b7b9850d72d6284bb4bcb53</name>
+        <next_element/>
+        <order>3</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>lisa.holenstein</sys_created_by>
+        <sys_created_on>2021-01-20 13:55:34</sys_created_on>
+        <sys_id>a52d498a1bf16010d72d6284bb4bcbb7</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Install plugins">61a141ba1b7b9850d72d6284bb4bcb38</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>lisa.holenstein</sys_updated_by>
+        <sys_updated_on>2021-01-20 13:55:34</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_instance action="delete_multiple" query="flow=c82245fa1b7b9850d72d6284bb4bcb53^sys_idNOT IN292bc50a1bf16010d72d6284bb4bcbeb"/>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Look Up Records">43400a1587003300663ca1bb36cb0b4b</action_type>
+        <action_type_parent/>
+        <comment/>
+        <compiled_snapshot>43400a1587003300663ca1bb36cb0b4b</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Install plugins on remote instance">c82245fa1b7b9850d72d6284bb4bcb53</flow>
+        <order>1</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>lisa.holenstein</sys_created_by>
+        <sys_created_on>2021-01-20 13:46:49</sys_created_on>
+        <sys_id>292bc50a1bf16010d72d6284bb4bcbeb</sys_id>
+        <sys_mod_count>10</sys_mod_count>
+        <sys_scope display_value="Install plugins">61a141ba1b7b9850d72d6284bb4bcb38</sys_scope>
+        <sys_updated_by>lisa.holenstein</sys_updated_by>
+        <sys_updated_on>2021-03-05 08:59:41</sys_updated_on>
+        <ui_id>e459699e-3509-4dff-be5d-2d17f13f0b71</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=292bc50a1bf16010d72d6284bb4bcbeb"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>292bc50a1bf16010d72d6284bb4bcbeb</document_key>
+        <order>0</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>lisa.holenstein</sys_created_by>
+        <sys_created_on>2021-01-20 13:46:49</sys_created_on>
+        <sys_id>292bc50a1bf16010d72d6284bb4bcbed</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>lisa.holenstein</sys_updated_by>
+        <sys_updated_on>2021-01-20 13:46:49</sys_updated_on>
+        <value>x_snc_lh_plugins_lookup</value>
+        <variable display_value="Table">8f400a1587003300663ca1bb36cb0b4b</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=292bc50a1bf16010d72d6284bb4bcbeb"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>conditions</field>
+        <id>292bc50a1bf16010d72d6284bb4bcbeb</id>
+        <sys_created_by>lisa.holenstein</sys_created_by>
+        <sys_created_on>2021-01-20 13:46:49</sys_created_on>
+        <sys_id>e12bc50a1bf16010d72d6284bb4bcbed</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>lisa.holenstein</sys_updated_by>
+        <sys_updated_on>2021-01-20 13:46:49</sys_updated_on>
+        <table>var__m_sys_hub_action_input_43400a1587003300663ca1bb36cb0b4b</table>
+        <value>u_package={{subflow.package}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>table</field>
+        <id>292bc50a1bf16010d72d6284bb4bcbeb</id>
+        <sys_created_by>lisa.holenstein</sys_created_by>
+        <sys_created_on>2021-01-20 13:46:49</sys_created_on>
+        <sys_id>a52bc50a1bf16010d72d6284bb4bcbed</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>lisa.holenstein</sys_updated_by>
+        <sys_updated_on>2021-01-20 13:46:49</sys_updated_on>
+        <table>var__m_sys_hub_action_input_43400a1587003300663ca1bb36cb0b4b</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_hub_sub_flow_instance action="delete_multiple" query="flow=c82245fa1b7b9850d72d6284bb4bcb53^sys_idNOT INc82245fa1b7b9850d72d6284bb4bcb76"/>
+    <sys_hub_sub_flow_instance action="INSERT_OR_UPDATE">
+        <comment/>
+        <display_text/>
+        <flow display_value="Install plugins on remote instance">c82245fa1b7b9850d72d6284bb4bcb53</flow>
+        <inputs/>
+        <inputs/>
+        <order>3</order>
+        <parent_ui_id>ce9f7a14-49a8-4110-a22f-864bad37fcc0</parent_ui_id>
+        <subflow display_value="Activate Plugin">c791c805c7633300fbe745ece8c260ed</subflow>
+        <subflow_instance_inputs/>
+        <sys_class_name>sys_hub_sub_flow_instance</sys_class_name>
+        <sys_created_by>lisa.holenstein</sys_created_by>
+        <sys_created_on>2020-10-15 10:57:17</sys_created_on>
+        <sys_id>c82245fa1b7b9850d72d6284bb4bcb76</sys_id>
+        <sys_mod_count>32</sys_mod_count>
+        <sys_scope display_value="Install plugins">61a141ba1b7b9850d72d6284bb4bcb38</sys_scope>
+        <sys_updated_by>lisa.holenstein</sys_updated_by>
+        <sys_updated_on>2021-01-20 13:55:35</sys_updated_on>
+        <ui_id>325419b5-6857-4111-af6a-8ed5e163e31a</ui_id>
+    </sys_hub_sub_flow_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=c82245fa1b7b9850d72d6284bb4bcb76"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_sub_flow_instance</document>
+        <document_key>c82245fa1b7b9850d72d6284bb4bcb76</document_key>
+        <order>1</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>lisa.holenstein</sys_created_by>
+        <sys_created_on>2020-10-15 10:57:17</sys_created_on>
+        <sys_id>5c2245fa1b7b9850d72d6284bb4bcb79</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_updated_by>lisa.holenstein</sys_updated_by>
+        <sys_updated_on>2020-10-15 11:52:01</sys_updated_on>
+        <value/>
+        <variable display_value="Plugin Id">c791c805c7633300fbe745ece8c260ef</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_sub_flow_instance</document>
+        <document_key>c82245fa1b7b9850d72d6284bb4bcb76</document_key>
+        <order>2</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>lisa.holenstein</sys_created_by>
+        <sys_created_on>2020-10-15 10:57:17</sys_created_on>
+        <sys_id>942245fa1b7b9850d72d6284bb4bcb7a</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_updated_by>lisa.holenstein</sys_updated_by>
+        <sys_updated_on>2020-10-15 10:59:34</sys_updated_on>
+        <value/>
+        <variable display_value="Credential Alias">5f910c05c7633300fbe745ece8c26009</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=c82245fa1b7b9850d72d6284bb4bcb76"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>credential_alias</field>
+        <id>c82245fa1b7b9850d72d6284bb4bcb76</id>
+        <sys_created_by>lisa.holenstein</sys_created_by>
+        <sys_created_on>2020-10-15 10:57:17</sys_created_on>
+        <sys_id>d82245fa1b7b9850d72d6284bb4bcb79</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_updated_by>lisa.holenstein</sys_updated_by>
+        <sys_updated_on>2020-10-15 10:59:34</sys_updated_on>
+        <table>var__m_sys_hub_flow_input_c791c805c7633300fbe745ece8c260ed</table>
+        <value>{{subflow.credential_alias}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>instance_url</field>
+        <id>c82245fa1b7b9850d72d6284bb4bcb76</id>
+        <sys_created_by>lisa.holenstein</sys_created_by>
+        <sys_created_on>2020-10-15 10:57:17</sys_created_on>
+        <sys_id>dc2245fa1b7b9850d72d6284bb4bcb78</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>lisa.holenstein</sys_updated_by>
+        <sys_updated_on>2020-10-15 10:57:17</sys_updated_on>
+        <table>var__m_sys_hub_flow_input_c791c805c7633300fbe745ece8c260ed</table>
+        <value>{{subflow.instance_url}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>plugin_id</field>
+        <id>c82245fa1b7b9850d72d6284bb4bcb76</id>
+        <sys_created_by>lisa.holenstein</sys_created_by>
+        <sys_created_on>2020-10-15 10:57:17</sys_created_on>
+        <sys_id>182245fa1b7b9850d72d6284bb4bcb79</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_updated_by>lisa.holenstein</sys_updated_by>
+        <sys_updated_on>2020-10-15 11:52:01</sys_updated_on>
+        <table>var__m_sys_hub_flow_input_c791c805c7633300fbe745ece8c260ed</table>
+        <value>{{ce9f7a14-49a8-4110-a22f-864bad37fcc0.item.u_plugin_id}}</value>
+    </sys_element_mapping>
+    <sys_hub_flow_logic action="delete_multiple" query="flow=c82245fa1b7b9850d72d6284bb4bcb53^sys_idNOT IN0eaec17a1bbb9850d72d6284bb4bcbfc"/>
+    <sys_hub_flow_logic action="INSERT_OR_UPDATE">
+        <block display_value="">02aec17a1bbb9850d72d6284bb4bcbfc</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <decision_table_inputs/>
+        <display_text/>
+        <extended_inputs/>
+        <flow display_value="Install plugins on remote instance">c82245fa1b7b9850d72d6284bb4bcb53</flow>
+        <flow_variable/>
+        <flow_variables_assigned/>
+        <inputs/>
+        <inputs/>
+        <logic_definition display_value="For Each">098e1dc5c3e232002841b63b12d3ae33</logic_definition>
+        <order>2</order>
+        <outputs_assigned/>
+        <outputs_to_assign/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic</sys_class_name>
+        <sys_created_by>lisa.holenstein</sys_created_by>
+        <sys_created_on>2020-10-15 11:52:01</sys_created_on>
+        <sys_id>0eaec17a1bbb9850d72d6284bb4bcbfc</sys_id>
+        <sys_mod_count>11</sys_mod_count>
+        <sys_scope display_value="Install plugins">61a141ba1b7b9850d72d6284bb4bcb38</sys_scope>
+        <sys_updated_by>lisa.holenstein</sys_updated_by>
+        <sys_updated_on>2021-01-20 13:55:35</sys_updated_on>
+        <ui_id>ce9f7a14-49a8-4110-a22f-864bad37fcc0</ui_id>
+        <workflow_inputs/>
+        <workflow_reference/>
+    </sys_hub_flow_logic>
+    <sys_variable_value action="delete_multiple" query="document_key=0eaec17a1bbb9850d72d6284bb4bcbfc"/>
+    <sys_element_mapping action="delete_multiple" query="id=0eaec17a1bbb9850d72d6284bb4bcbfc"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>items</field>
+        <id>0eaec17a1bbb9850d72d6284bb4bcbfc</id>
+        <sys_created_by>lisa.holenstein</sys_created_by>
+        <sys_created_on>2020-10-15 11:52:01</sys_created_on>
+        <sys_id>8eaec17a1bbb9850d72d6284bb4bcbff</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_updated_by>lisa.holenstein</sys_updated_by>
+        <sys_updated_on>2021-01-20 13:46:49</sys_updated_on>
+        <table>var__m_sys_hub_flow_logic_input_098e1dc5c3e232002841b63b12d3ae33</table>
+        <value>{{e459699e-3509-4dff-be5d-2d17f13f0b71.Records}}</value>
+    </sys_element_mapping>
+    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_flow_input_c82245fa1b7b9850d72d6284bb4bcb53^sys_idNOT IN082245fa1b7b9850d72d6284bb4bcb66,31a2053e1b7b9850d72d6284bb4bcbce,792d498a1bf16010d72d6284bb4bcbfb"/>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>instance_url</element>
+        <help/>
+        <hint/>
+        <label>Instance URL</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_c82245fa1b7b9850d72d6284bb4bcb53</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>lisa.holenstein</sys_created_by>
+        <sys_created_on>2020-10-15 10:57:17</sys_created_on>
+        <sys_id>082245fa1b7b9850d72d6284bb4bcb66</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Install plugins" source="x_snc_lh_plugins">61a141ba1b7b9850d72d6284bb4bcb38</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Install plugins">61a141ba1b7b9850d72d6284bb4bcb38</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>lisa.holenstein</sys_updated_by>
+        <sys_updated_on>2020-10-15 10:57:17</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>credential_alias</element>
+        <help/>
+        <hint/>
+        <label>Credential alias</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_c82245fa1b7b9850d72d6284bb4bcb53</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>lisa.holenstein</sys_created_by>
+        <sys_created_on>2020-10-15 10:59:34</sys_created_on>
+        <sys_id>31a2053e1b7b9850d72d6284bb4bcbce</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Install plugins" source="x_snc_lh_plugins">61a141ba1b7b9850d72d6284bb4bcb38</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Install plugins">61a141ba1b7b9850d72d6284bb4bcb38</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>lisa.holenstein</sys_updated_by>
+        <sys_updated_on>2020-10-15 10:59:34</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>package</element>
+        <help/>
+        <hint/>
+        <label>Package</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_c82245fa1b7b9850d72d6284bb4bcb53</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>lisa.holenstein</sys_created_by>
+        <sys_created_on>2021-01-20 13:55:35</sys_created_on>
+        <sys_id>792d498a1bf16010d72d6284bb4bcbfb</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Install plugins" source="x_snc_lh_plugins">61a141ba1b7b9850d72d6284bb4bcb38</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Install plugins">61a141ba1b7b9850d72d6284bb4bcb38</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>lisa.holenstein</sys_updated_by>
+        <sys_updated_on>2021-01-20 13:55:35</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_flow_subflow_plan action="delete_multiple" query="plan_id=c82245fa1b7b9850d72d6284bb4bcb53^sys_idNOT IN0ebe097a1bbb9850d72d6284bb4bcb38"/>
+    <sys_flow_subflow_plan action="INSERT_OR_UPDATE">
+        <plan>{"persistor":{"@class":".ChunkingPlanPersistor","table":"sys_flow_subflow_plan","id":"0ebe097a1bbb9850d72d6284bb4bcb38","name":"plan"}}</plan>
+        <plan_id display_value="Install plugins on remote instance">c82245fa1b7b9850d72d6284bb4bcb53</plan_id>
+        <snapshot>446fae041b7624100c25777d8b4bcb6a</snapshot>
+        <sys_created_by>lisa.holenstein</sys_created_by>
+        <sys_created_on>2020-10-15 11:52:17</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>0ebe097a1bbb9850d72d6284bb4bcb38</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_overrides/>
+        <sys_scope/>
+        <sys_updated_by>lisa.holenstein</sys_updated_by>
+        <sys_updated_on>2021-01-20 13:35:20</sys_updated_on>
+    </sys_flow_subflow_plan>
+    <sys_hub_flow_snapshot action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <acls/>
+        <active>true</active>
+        <annotation/>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <copied_from/>
+        <copied_from_name/>
+        <description/>
+        <internal_name>install_plugins_on_remote_instance</internal_name>
+        <label_cache>[{"name":"ce9f7a14-49a8-4110-a22f-864bad37fcc0.item.u_plugin_id","label":"2➛Install plugin lookup Record➛Plugin ID","reference":"","reference_display":"Plugin ID","type":"string","base_type":"string","parent_table_name":"x_snc_lh_plugins_lookup","column_name":"u_plugin_id"},{"name":"subflow.package","label":"Input➛Package","reference":"","reference_display":"","type":"string","base_type":"string","column_name":"","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"38f4e171-17c6-4a49-980d-d617e28ac11b","sourceUiUniqueId":"","sourceType":"","sourceId":""}},{"name":"6d3f7dfc-f6b2-48d1-a428-902068431644.Count","label":"1➛Count","reference_display":"Count","type":"integer","base_type":"integer","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"6d3f7dfc-f6b2-48d1-a428-902068431644.Table","label":"1➛Install plugin lookup Table","reference":"x_snc_lh_plugins_lookup","reference_display":"Install plugin lookup","type":"table_name","base_type":"table_name","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"6d3f7dfc-f6b2-48d1-a428-902068431644.Records","label":"1➛Install plugin lookup Records","reference":"x_snc_lh_plugins_lookup","reference_display":"Install plugin lookup","type":"records","base_type":"records","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"subflow.credential_alias","label":"Input➛Credential alias","reference":"sys_alias","reference_display":"Connection \u0026 Credential Aliases","type":"reference","base_type":"reference","column_name":"","attributes":{"uiType":"reference","uiTypeLabel":"Reference","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"e52eba43-69a1-4c7f-b29b-552a9a22b6d7","sourceUiUniqueId":"","sourceType":"","sourceId":""}},{"name":"d9ca7c14-dc81-40d9-a891-a1d3a6f1f8ec.http_status","label":"8➛HTTP Status","reference_display":"HTTP Status","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"d9ca7c14-dc81-40d9-a891-a1d3a6f1f8ec.progress_id","label":"8➛Progress Id","reference_display":"Progress Id","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"d9ca7c14-dc81-40d9-a891-a1d3a6f1f8ec.progress_url","label":"8➛Progress URL","reference_display":"Progress URL","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"d9ca7c14-dc81-40d9-a891-a1d3a6f1f8ec.error","label":"8➛Error","reference_display":"Error","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"d9ca7c14-dc81-40d9-a891-a1d3a6f1f8ec.status_detail","label":"8➛Status Detail","reference_display":"Status Detail","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"d9ca7c14-dc81-40d9-a891-a1d3a6f1f8ec.status_message","label":"8➛Status Message","reference_display":"Status Message","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"d9ca7c14-dc81-40d9-a891-a1d3a6f1f8ec.status_label","label":"8➛Status Label","reference_display":"Status Label","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"d9ca7c14-dc81-40d9-a891-a1d3a6f1f8ec.status","label":"8➛Status","reference_display":"Status","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"6721c9f2-fda4-4b5e-b45e-7c9b300bbfa0.http_status","label":"7➛HTTP Status","reference_display":"HTTP Status","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"6721c9f2-fda4-4b5e-b45e-7c9b300bbfa0.progress_id","label":"7➛Progress Id","reference_display":"Progress Id","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"6721c9f2-fda4-4b5e-b45e-7c9b300bbfa0.progress_url","label":"7➛Progress URL","reference_display":"Progress URL","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"6721c9f2-fda4-4b5e-b45e-7c9b300bbfa0.error","label":"7➛Error","reference_display":"Error","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"6721c9f2-fda4-4b5e-b45e-7c9b300bbfa0.status_detail","label":"7➛Status Detail","reference_display":"Status Detail","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"6721c9f2-fda4-4b5e-b45e-7c9b300bbfa0.status_message","label":"7➛Status Message","reference_display":"Status Message","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"6721c9f2-fda4-4b5e-b45e-7c9b300bbfa0.status_label","label":"7➛Status Label","reference_display":"Status Label","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"6721c9f2-fda4-4b5e-b45e-7c9b300bbfa0.status","label":"7➛Status","reference_display":"Status","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"adbd27d0-17d8-449e-8d56-e14ac17c1f33.http_status","label":"6➛HTTP Status","reference_display":"HTTP Status","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"adbd27d0-17d8-449e-8d56-e14ac17c1f33.progress_id","label":"6➛Progress Id","reference_display":"Progress Id","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"adbd27d0-17d8-449e-8d56-e14ac17c1f33.progress_url","label":"6➛Progress URL","reference_display":"Progress URL","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"adbd27d0-17d8-449e-8d56-e14ac17c1f33.error","label":"6➛Error","reference_display":"Error","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"adbd27d0-17d8-449e-8d56-e14ac17c1f33.status_detail","label":"6➛Status Detail","reference_display":"Status Detail","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"adbd27d0-17d8-449e-8d56-e14ac17c1f33.status_message","label":"6➛Status Message","reference_display":"Status Message","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"adbd27d0-17d8-449e-8d56-e14ac17c1f33.status_label","label":"6➛Status Label","reference_display":"Status Label","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"adbd27d0-17d8-449e-8d56-e14ac17c1f33.status","label":"6➛Status","reference_display":"Status","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"90e6161f-84f7-4ad0-abcf-3198004015e1.http_status","label":"5➛HTTP Status","reference_display":"HTTP Status","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"90e6161f-84f7-4ad0-abcf-3198004015e1.progress_id","label":"5➛Progress Id","reference_display":"Progress Id","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"90e6161f-84f7-4ad0-abcf-3198004015e1.progress_url","label":"5➛Progress URL","reference_display":"Progress URL","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"90e6161f-84f7-4ad0-abcf-3198004015e1.error","label":"5➛Error","reference_display":"Error","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"90e6161f-84f7-4ad0-abcf-3198004015e1.status_detail","label":"5➛Status Detail","reference_display":"Status Detail","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"90e6161f-84f7-4ad0-abcf-3198004015e1.status_message","label":"5➛Status Message","reference_display":"Status Message","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"90e6161f-84f7-4ad0-abcf-3198004015e1.status_label","label":"5➛Status Label","reference_display":"Status Label","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"90e6161f-84f7-4ad0-abcf-3198004015e1.status","label":"5➛Status","reference_display":"Status","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"43cfa86c-3f0f-44ab-a0b9-4f2734ceb77d.http_status","label":"4➛HTTP Status","reference_display":"HTTP Status","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"43cfa86c-3f0f-44ab-a0b9-4f2734ceb77d.progress_id","label":"4➛Progress Id","reference_display":"Progress Id","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"43cfa86c-3f0f-44ab-a0b9-4f2734ceb77d.progress_url","label":"4➛Progress URL","reference_display":"Progress URL","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"43cfa86c-3f0f-44ab-a0b9-4f2734ceb77d.error","label":"4➛Error","reference_display":"Error","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"43cfa86c-3f0f-44ab-a0b9-4f2734ceb77d.status_detail","label":"4➛Status Detail","reference_display":"Status Detail","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"43cfa86c-3f0f-44ab-a0b9-4f2734ceb77d.status_message","label":"4➛Status Message","reference_display":"Status Message","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"43cfa86c-3f0f-44ab-a0b9-4f2734ceb77d.status_label","label":"4➛Status Label","reference_display":"Status Label","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"43cfa86c-3f0f-44ab-a0b9-4f2734ceb77d.status","label":"4➛Status","reference_display":"Status","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"6d50d2ab-f94f-4d24-82cd-daab3b1d3147.http_status","label":"2➛HTTP Status","reference_display":"HTTP Status","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"6d50d2ab-f94f-4d24-82cd-daab3b1d3147.progress_id","label":"2➛Progress Id","reference_display":"Progress Id","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"6d50d2ab-f94f-4d24-82cd-daab3b1d3147.progress_url","label":"2➛Progress URL","reference_display":"Progress URL","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"6d50d2ab-f94f-4d24-82cd-daab3b1d3147.error","label":"2➛Error","reference_display":"Error","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"6d50d2ab-f94f-4d24-82cd-daab3b1d3147.status_detail","label":"2➛Status Detail","reference_display":"Status Detail","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"6d50d2ab-f94f-4d24-82cd-daab3b1d3147.status_message","label":"2➛Status Message","reference_display":"Status Message","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"6d50d2ab-f94f-4d24-82cd-daab3b1d3147.status_label","label":"2➛Status Label","reference_display":"Status Label","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"6d50d2ab-f94f-4d24-82cd-daab3b1d3147.status","label":"2➛Status","reference_display":"Status","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"subflow.instance_url","label":"Input➛Instance URL","reference":"","reference_display":"","type":"url","base_type":"url","column_name":"","attributes":{"uiType":"url","uiTypeLabel":"URL","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"cafbfecb-301e-4f7f-aaf5-5e3d9db5717e","sourceUiUniqueId":"","sourceType":"","sourceId":""}},{"name":"56556742-d9d8-4330-9329-445a983b22f2.status","label":"3➛Status","reference_display":"Status","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"56556742-d9d8-4330-9329-445a983b22f2.status_label","label":"3➛Status Label","reference_display":"Status Label","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"56556742-d9d8-4330-9329-445a983b22f2.status_message","label":"3➛Status Message","reference_display":"Status Message","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"56556742-d9d8-4330-9329-445a983b22f2.status_detail","label":"3➛Status Detail","reference_display":"Status Detail","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"56556742-d9d8-4330-9329-445a983b22f2.error","label":"3➛Error","reference_display":"Error","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"56556742-d9d8-4330-9329-445a983b22f2.progress_url","label":"3➛Progress URL","reference_display":"Progress URL","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"56556742-d9d8-4330-9329-445a983b22f2.progress_id","label":"3➛Progress Id","reference_display":"Progress Id","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"56556742-d9d8-4330-9329-445a983b22f2.http_status","label":"3➛HTTP Status","reference_display":"HTTP Status","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"325419b5-6857-4111-af6a-8ed5e163e31a.status","label":"3➛Status","reference_display":"Status","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"325419b5-6857-4111-af6a-8ed5e163e31a.status_label","label":"3➛Status Label","reference_display":"Status Label","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"325419b5-6857-4111-af6a-8ed5e163e31a.status_message","label":"3➛Status Message","reference_display":"Status Message","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"325419b5-6857-4111-af6a-8ed5e163e31a.status_detail","label":"3➛Status Detail","reference_display":"Status Detail","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"325419b5-6857-4111-af6a-8ed5e163e31a.error","label":"3➛Error","reference_display":"Error","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"325419b5-6857-4111-af6a-8ed5e163e31a.progress_url","label":"3➛Progress URL","reference_display":"Progress URL","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"325419b5-6857-4111-af6a-8ed5e163e31a.progress_id","label":"3➛Progress Id","reference_display":"Progress Id","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"325419b5-6857-4111-af6a-8ed5e163e31a.http_status","label":"3➛HTTP Status","reference_display":"HTTP Status","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"84a34e5a-e92f-4f13-b7d4-1cec65e94560.Records","label":"1➛Records","reference_display":"Records","type":"records","base_type":"records","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"84a34e5a-e92f-4f13-b7d4-1cec65e94560.Table","label":"1➛Table","reference_display":"Table","type":"table_name","base_type":"table_name","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"84a34e5a-e92f-4f13-b7d4-1cec65e94560.Count","label":"1➛Count","reference_display":"Count","type":"integer","base_type":"integer","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"ce9f7a14-49a8-4110-a22f-864bad37fcc0.item","label":"2➛Install plugin lookup Record","reference":"x_snc_lh_plugins_lookup","reference_display":"Install plugin lookup","type":"reference","base_type":"reference","attributes":{"pills_draggable_inside_block":"true","pills_draggable_outside_block":"false"}}]</label_cache>
+        <master>true</master>
+        <name>Install plugins on remote instance</name>
+        <natlang/>
+        <outputs/>
+        <parent_flow display_value="Install plugins on remote instance">c82245fa1b7b9850d72d6284bb4bcb53</parent_flow>
+        <remote_trigger_id/>
+        <run_as>system</run_as>
+        <run_with_roles/>
+        <sc_callable>false</sc_callable>
+        <status>published</status>
+        <sys_class_name>sys_hub_flow_snapshot</sys_class_name>
+        <sys_created_by>lisa.holenstein</sys_created_by>
+        <sys_created_on>2020-10-15 11:52:13</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>05be857a1bbb9850d72d6284bb4bcbdf</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name/>
+        <sys_overrides/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Install plugins">61a141ba1b7b9850d72d6284bb4bcb38</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>lisa.holenstein</sys_updated_by>
+        <sys_updated_on>2021-01-20 13:33:30</sys_updated_on>
+        <type>subflow</type>
+    </sys_hub_flow_snapshot>
+    <sys_translated_text action="delete_multiple" query="documentkey=05be857a1bbb9850d72d6284bb4bcbdf"/>
+    <sys_variable_value action="delete_multiple" query="document_key=05be857a1bbb9850d72d6284bb4bcbdf"/>
+    <sys_flow_cat_variable_model action="delete_multiple" query="id=05be857a1bbb9850d72d6284bb4bcbdf^sys_idNOT IN85be857a1bbb9850d72d6284bb4bcbe0"/>
+    <sys_flow_cat_variable_model action="INSERT_OR_UPDATE">
+        <id>05be857a1bbb9850d72d6284bb4bcbdf</id>
+        <name>Install plugins on remote instance</name>
+        <sys_created_by>lisa.holenstein</sys_created_by>
+        <sys_created_on>2020-10-15 11:52:13</sys_created_on>
+        <sys_id>85be857a1bbb9850d72d6284bb4bcbe0</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>lisa.holenstein</sys_updated_by>
+        <sys_updated_on>2020-10-15 11:52:13</sys_updated_on>
+    </sys_flow_cat_variable_model>
+    <sys_hub_flow_input action="delete_multiple" query="model=05be857a1bbb9850d72d6284bb4bcbdf^sys_idNOT IN8dbe857a1bbb9850d72d6284bb4bcbe1,8dbec57a1bbb9850d72d6284bb4bcb0f,c9bec57a1bbb9850d72d6284bb4bcb19"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=url,uiTypeLabel=URL,uiUniqueId=cafbfecb-301e-4f7f-aaf5-5e3d9db5717e</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value>https://appenginewf.service-now.com/</default_value>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>instance_url</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="URL">url</internal_type>
+        <label>Instance URL</label>
+        <mandatory>true</mandatory>
+        <max_length>1024</max_length>
+        <model display_value="Install plugins on remote instance">05be857a1bbb9850d72d6284bb4bcbdf</model>
+        <model_id>05be857a1bbb9850d72d6284bb4bcbdf</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_input_05be857a1bbb9850d72d6284bb4bcbdf</name>
+        <next_element/>
+        <order>1</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>lisa.holenstein</sys_created_by>
+        <sys_created_on>2020-10-15 11:52:13</sys_created_on>
+        <sys_id>8dbe857a1bbb9850d72d6284bb4bcbe1</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Install plugins">61a141ba1b7b9850d72d6284bb4bcb38</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>lisa.holenstein</sys_updated_by>
+        <sys_updated_on>2020-10-15 11:52:13</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=reference,uiTypeLabel=Reference,uiUniqueId=e52eba43-69a1-4c7f-b29b-552a9a22b6d7</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>credential_alias</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="Reference">reference</internal_type>
+        <label>Credential alias</label>
+        <mandatory>true</mandatory>
+        <max_length>32</max_length>
+        <model display_value="Install plugins on remote instance">05be857a1bbb9850d72d6284bb4bcbdf</model>
+        <model_id>05be857a1bbb9850d72d6284bb4bcbdf</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_input_05be857a1bbb9850d72d6284bb4bcbdf</name>
+        <next_element/>
+        <order>2</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference display_value="" name="sys_alias">sys_alias</reference>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>lisa.holenstein</sys_created_by>
+        <sys_created_on>2020-10-15 11:52:13</sys_created_on>
+        <sys_id>8dbec57a1bbb9850d72d6284bb4bcb0f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Install plugins">61a141ba1b7b9850d72d6284bb4bcb38</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>lisa.holenstein</sys_updated_by>
+        <sys_updated_on>2020-10-15 11:52:13</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String,uiUniqueId=38f4e171-17c6-4a49-980d-d617e28ac11b</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>package</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>Package</label>
+        <mandatory>false</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="Install plugins on remote instance">05be857a1bbb9850d72d6284bb4bcbdf</model>
+        <model_id>05be857a1bbb9850d72d6284bb4bcbdf</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_input_05be857a1bbb9850d72d6284bb4bcbdf</name>
+        <next_element/>
+        <order>3</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>lisa.holenstein</sys_created_by>
+        <sys_created_on>2020-10-15 11:52:14</sys_created_on>
+        <sys_id>c9bec57a1bbb9850d72d6284bb4bcb19</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Install plugins">61a141ba1b7b9850d72d6284bb4bcb38</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>lisa.holenstein</sys_updated_by>
+        <sys_updated_on>2020-10-15 11:52:14</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_instance action="delete_multiple" query="flow=05be857a1bbb9850d72d6284bb4bcbdf^sys_idNOT IN05bec57a1bbb9850d72d6284bb4bcb31"/>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Look Up Records">43400a1587003300663ca1bb36cb0b4b</action_type>
+        <action_type_parent display_value="Look Up Records">d1c56ec50b30030085c083eb37673a50</action_type_parent>
+        <comment/>
+        <compiled_snapshot>43400a1587003300663ca1bb36cb0b4b</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Install plugins on remote instance">05be857a1bbb9850d72d6284bb4bcbdf</flow>
+        <order>1</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>lisa.holenstein</sys_created_by>
+        <sys_created_on>2020-10-15 11:52:14</sys_created_on>
+        <sys_id>05bec57a1bbb9850d72d6284bb4bcb31</sys_id>
+        <sys_mod_count>10</sys_mod_count>
+        <sys_scope display_value="Install plugins">61a141ba1b7b9850d72d6284bb4bcb38</sys_scope>
+        <sys_updated_by>lisa.holenstein</sys_updated_by>
+        <sys_updated_on>2021-01-20 13:33:30</sys_updated_on>
+        <ui_id>6d3f7dfc-f6b2-48d1-a428-902068431644</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=05bec57a1bbb9850d72d6284bb4bcb31"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>05bec57a1bbb9850d72d6284bb4bcb31</document_key>
+        <order>2</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>lisa.holenstein</sys_created_by>
+        <sys_created_on>2020-10-15 11:57:56</sys_created_on>
+        <sys_id>640019fa1bbb9850d72d6284bb4bcb73</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>lisa.holenstein</sys_updated_by>
+        <sys_updated_on>2020-10-15 11:57:56</sys_updated_on>
+        <value>order</value>
+        <variable display_value="Order by">c7400a1587003300663ca1bb36cb0b55</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>05bec57a1bbb9850d72d6284bb4bcb31</document_key>
+        <order>0</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>lisa.holenstein</sys_created_by>
+        <sys_created_on>2020-10-15 11:52:14</sys_created_on>
+        <sys_id>8dbec57a1bbb9850d72d6284bb4bcb32</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>lisa.holenstein</sys_updated_by>
+        <sys_updated_on>2020-10-15 11:52:14</sys_updated_on>
+        <value>x_snc_lh_plugins_lookup</value>
+        <variable display_value="Table">8f400a1587003300663ca1bb36cb0b4b</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=05bec57a1bbb9850d72d6284bb4bcb31"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>conditions</field>
+        <id>05bec57a1bbb9850d72d6284bb4bcb31</id>
+        <sys_created_by>lisa.holenstein</sys_created_by>
+        <sys_created_on>2020-10-15 11:52:14</sys_created_on>
+        <sys_id>49bec57a1bbb9850d72d6284bb4bcb32</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>lisa.holenstein</sys_updated_by>
+        <sys_updated_on>2020-10-15 11:52:14</sys_updated_on>
+        <table>var__m_sys_hub_action_input_43400a1587003300663ca1bb36cb0b4b</table>
+        <value>u_package={{subflow.package}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>sort_column</field>
+        <id>05bec57a1bbb9850d72d6284bb4bcb31</id>
+        <sys_created_by>lisa.holenstein</sys_created_by>
+        <sys_created_on>2020-10-15 11:57:56</sys_created_on>
+        <sys_id>e00019fa1bbb9850d72d6284bb4bcb73</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>lisa.holenstein</sys_updated_by>
+        <sys_updated_on>2020-10-15 11:57:56</sys_updated_on>
+        <table>var__m_sys_hub_action_input_43400a1587003300663ca1bb36cb0b4b</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>table</field>
+        <id>05bec57a1bbb9850d72d6284bb4bcb31</id>
+        <sys_created_by>lisa.holenstein</sys_created_by>
+        <sys_created_on>2020-10-15 11:52:14</sys_created_on>
+        <sys_id>0dbec57a1bbb9850d72d6284bb4bcb32</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>lisa.holenstein</sys_updated_by>
+        <sys_updated_on>2020-10-15 11:52:14</sys_updated_on>
+        <table>var__m_sys_hub_action_input_43400a1587003300663ca1bb36cb0b4b</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_hub_sub_flow_instance action="delete_multiple" query="flow=05be857a1bbb9850d72d6284bb4bcbdf^sys_idNOT IN41bec57a1bbb9850d72d6284bb4bcb33"/>
+    <sys_hub_sub_flow_instance action="INSERT_OR_UPDATE">
+        <comment/>
+        <display_text/>
+        <flow display_value="Install plugins on remote instance">05be857a1bbb9850d72d6284bb4bcbdf</flow>
+        <inputs/>
+        <inputs/>
+        <order>3</order>
+        <parent_ui_id>ce9f7a14-49a8-4110-a22f-864bad37fcc0</parent_ui_id>
+        <subflow display_value="Activate Plugin">c791c805c7633300fbe745ece8c260ed</subflow>
+        <subflow_instance_inputs/>
+        <sys_class_name>sys_hub_sub_flow_instance</sys_class_name>
+        <sys_created_by>lisa.holenstein</sys_created_by>
+        <sys_created_on>2020-10-15 11:52:14</sys_created_on>
+        <sys_id>41bec57a1bbb9850d72d6284bb4bcb33</sys_id>
+        <sys_mod_count>10</sys_mod_count>
+        <sys_scope display_value="Install plugins">61a141ba1b7b9850d72d6284bb4bcb38</sys_scope>
+        <sys_updated_by>lisa.holenstein</sys_updated_by>
+        <sys_updated_on>2021-01-20 13:33:30</sys_updated_on>
+        <ui_id>325419b5-6857-4111-af6a-8ed5e163e31a</ui_id>
+    </sys_hub_sub_flow_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=41bec57a1bbb9850d72d6284bb4bcb33"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_sub_flow_instance</document>
+        <document_key>41bec57a1bbb9850d72d6284bb4bcb33</document_key>
+        <order>2</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>lisa.holenstein</sys_created_by>
+        <sys_created_on>2020-10-15 11:52:14</sys_created_on>
+        <sys_id>05bec57a1bbb9850d72d6284bb4bcb35</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>lisa.holenstein</sys_updated_by>
+        <sys_updated_on>2020-10-15 11:52:14</sys_updated_on>
+        <value/>
+        <variable display_value="Credential Alias">5f910c05c7633300fbe745ece8c26009</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=41bec57a1bbb9850d72d6284bb4bcb33"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>credential_alias</field>
+        <id>41bec57a1bbb9850d72d6284bb4bcb33</id>
+        <sys_created_by>lisa.holenstein</sys_created_by>
+        <sys_created_on>2020-10-15 11:52:14</sys_created_on>
+        <sys_id>81bec57a1bbb9850d72d6284bb4bcb35</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>lisa.holenstein</sys_updated_by>
+        <sys_updated_on>2020-10-15 11:52:14</sys_updated_on>
+        <table>var__m_sys_hub_flow_input_c791c805c7633300fbe745ece8c260ed</table>
+        <value>{{subflow.credential_alias}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>instance_url</field>
+        <id>41bec57a1bbb9850d72d6284bb4bcb33</id>
+        <sys_created_by>lisa.holenstein</sys_created_by>
+        <sys_created_on>2020-10-15 11:52:14</sys_created_on>
+        <sys_id>0dbec57a1bbb9850d72d6284bb4bcb34</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>lisa.holenstein</sys_updated_by>
+        <sys_updated_on>2020-10-15 11:52:14</sys_updated_on>
+        <table>var__m_sys_hub_flow_input_c791c805c7633300fbe745ece8c260ed</table>
+        <value>{{subflow.instance_url}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>plugin_id</field>
+        <id>41bec57a1bbb9850d72d6284bb4bcb33</id>
+        <sys_created_by>lisa.holenstein</sys_created_by>
+        <sys_created_on>2020-10-15 11:52:14</sys_created_on>
+        <sys_id>cdbec57a1bbb9850d72d6284bb4bcb34</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>lisa.holenstein</sys_updated_by>
+        <sys_updated_on>2020-10-15 11:52:14</sys_updated_on>
+        <table>var__m_sys_hub_flow_input_c791c805c7633300fbe745ece8c260ed</table>
+        <value>{{ce9f7a14-49a8-4110-a22f-864bad37fcc0.item.u_plugin_id}}</value>
+    </sys_element_mapping>
+    <sys_hub_flow_logic action="delete_multiple" query="flow=05be857a1bbb9850d72d6284bb4bcbdf^sys_idNOT INcdbec57a1bbb9850d72d6284bb4bcb26"/>
+    <sys_hub_flow_logic action="INSERT_OR_UPDATE">
+        <block display_value="">02aec17a1bbb9850d72d6284bb4bcbfc</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <decision_table_inputs/>
+        <display_text/>
+        <extended_inputs/>
+        <flow display_value="Install plugins on remote instance">05be857a1bbb9850d72d6284bb4bcbdf</flow>
+        <flow_variable/>
+        <flow_variables_assigned/>
+        <inputs/>
+        <inputs/>
+        <logic_definition display_value="For Each">098e1dc5c3e232002841b63b12d3ae33</logic_definition>
+        <order>2</order>
+        <outputs_assigned/>
+        <outputs_to_assign/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic</sys_class_name>
+        <sys_created_by>lisa.holenstein</sys_created_by>
+        <sys_created_on>2020-10-15 11:52:14</sys_created_on>
+        <sys_id>cdbec57a1bbb9850d72d6284bb4bcb26</sys_id>
+        <sys_mod_count>6</sys_mod_count>
+        <sys_scope display_value="Install plugins">61a141ba1b7b9850d72d6284bb4bcb38</sys_scope>
+        <sys_updated_by>lisa.holenstein</sys_updated_by>
+        <sys_updated_on>2021-01-20 13:33:30</sys_updated_on>
+        <ui_id>ce9f7a14-49a8-4110-a22f-864bad37fcc0</ui_id>
+        <workflow_inputs/>
+        <workflow_reference/>
+    </sys_hub_flow_logic>
+    <sys_variable_value action="delete_multiple" query="document_key=cdbec57a1bbb9850d72d6284bb4bcb26"/>
+    <sys_element_mapping action="delete_multiple" query="id=cdbec57a1bbb9850d72d6284bb4bcb26"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>items</field>
+        <id>cdbec57a1bbb9850d72d6284bb4bcb26</id>
+        <sys_created_by>lisa.holenstein</sys_created_by>
+        <sys_created_on>2020-10-15 11:52:14</sys_created_on>
+        <sys_id>49bec57a1bbb9850d72d6284bb4bcb29</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>lisa.holenstein</sys_updated_by>
+        <sys_updated_on>2020-10-15 11:52:14</sys_updated_on>
+        <table>var__m_sys_hub_flow_logic_input_098e1dc5c3e232002841b63b12d3ae33</table>
+        <value>{{6d3f7dfc-f6b2-48d1-a428-902068431644.Records}}</value>
+    </sys_element_mapping>
+    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_flow_input_05be857a1bbb9850d72d6284bb4bcbdf^sys_idNOT IN49bec57a1bbb9850d72d6284bb4bcb1f,8dbec57a1bbb9850d72d6284bb4bcb0b,c9bec57a1bbb9850d72d6284bb4bcb15"/>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>package</element>
+        <help/>
+        <hint/>
+        <label>Package</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_05be857a1bbb9850d72d6284bb4bcbdf</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>lisa.holenstein</sys_created_by>
+        <sys_created_on>2020-10-15 11:52:14</sys_created_on>
+        <sys_id>49bec57a1bbb9850d72d6284bb4bcb1f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Install plugins" source="x_snc_lh_plugins">61a141ba1b7b9850d72d6284bb4bcb38</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Install plugins">61a141ba1b7b9850d72d6284bb4bcb38</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>lisa.holenstein</sys_updated_by>
+        <sys_updated_on>2020-10-15 11:52:14</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>instance_url</element>
+        <help/>
+        <hint/>
+        <label>Instance URL</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_05be857a1bbb9850d72d6284bb4bcbdf</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>lisa.holenstein</sys_created_by>
+        <sys_created_on>2020-10-15 11:52:13</sys_created_on>
+        <sys_id>8dbec57a1bbb9850d72d6284bb4bcb0b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Install plugins" source="x_snc_lh_plugins">61a141ba1b7b9850d72d6284bb4bcb38</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Install plugins">61a141ba1b7b9850d72d6284bb4bcb38</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>lisa.holenstein</sys_updated_by>
+        <sys_updated_on>2020-10-15 11:52:13</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>credential_alias</element>
+        <help/>
+        <hint/>
+        <label>Credential alias</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_05be857a1bbb9850d72d6284bb4bcbdf</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>lisa.holenstein</sys_created_by>
+        <sys_created_on>2020-10-15 11:52:14</sys_created_on>
+        <sys_id>c9bec57a1bbb9850d72d6284bb4bcb15</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Install plugins" source="x_snc_lh_plugins">61a141ba1b7b9850d72d6284bb4bcb38</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Install plugins">61a141ba1b7b9850d72d6284bb4bcb38</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>lisa.holenstein</sys_updated_by>
+        <sys_updated_on>2020-10-15 11:52:14</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+</record_update>
