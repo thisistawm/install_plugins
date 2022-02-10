@@ -8,6 +8,7 @@
                 <element inactive_on_update="false" label="Performance Analytics" sequence="30" value="pa"/>
                 <element inactive_on_update="false" label="Virtual Agent" sequence="40" value="va"/>
                 <element inactive_on_update="false" label="Agile Devlopment" sequence="50" value="agile"/>
+                <element inactive_on_update="false" label="Employee Center Pro" sequence="50" value="sn_ex_sp_pro"/>
             </choice>
         </element>
         <element attributes="edge_encryption_enabled=true" label="Plugin ID" mandatory="true" max_length="200" name="u_plugin_id" type="string"/>
